@@ -1,74 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manifesto </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>P.Thong</title>
 </head>
-<body>
-  <header>
-    <h1>Pascal Thong - Software developer</h1> 
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Agile</li>
-        <li>UML</li>
-        <li>Programming language</li>
-      </ul>
-    </nav>
-  </header>
-  <aside>
-    <section>
-      <h2>Home</h2>
-      <ul>
-        <li>What's in my mind?</li>
-        <li>Who Am I?</li>
-        <li>What do I wants to learn?</li>
-        <li></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Agile</h2>
-      <ul>
-        <li>The Manifesto</li>
-        <li>What's More</li>
-        <li>Scrum</li>
-        <li></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Programming language</h2>
-      <ul>
-        <li>Variabelen</li>
-        <li>Datatypes
-         
-        </li>
-        <li>Statements
-          <ul>
-            <li>If else</li>
-            <li>...</li>
-          </ul>
-
-        </li>
-        <li>Classes en Objects</li>
-      </ul>
-    </section>
-  </aside>
-  <main>
-    
-    <section>
-      
-    </section>
-
-  </main>
-  <aside>
-
-  </aside>
-  <script>
-    document.getElementById("name").addEventListener("click", (e)=>{
-      document.getElementById("name").innerHTML = "<h1>Pascal Thong - Agile Developer</h1>";
-
-    });
-  </script>
+<body>  
+    <div class="label">OVER MIJ</div>
+    <div class="bg"></div>
+    <header>
+        <nav> 
+            <span>Projecten</span> <span>Afbeeldingen</span> <span class="link-apps">Apps</span> <button>Inloggen</button>
+            <div class="apps-list hide">
+                <div>
+                  <img src="./img/stopwatch.svg" alt="">
+                  <p>StopWatch</p>
+                </div>
+                <div>
+                    <img src="./img/hammer.svg" alt="">
+                    <p>Hamertje</p>
+                </div>
+                <div>
+                    <img src="./img/music-note.svg" alt="">
+                    <p>Soundboard</p>
+                </div>
+                <div>
+                    <img src="./img/pencil.svg" alt="">
+                    <p>Writer</p>
+                </div>
+                <div>
+                    <img src="./img/puzzle.svg" alt="">
+                    <p>Sokoban</p>
+                </div>
+                <div>
+                    <img src="./img/fingerprint.svg" alt="">
+                    <p>ID-Scan</p>
+                </div>
+            </div>
+          
+        </nav>
+        <h1>
+            <span>
+                P
+            </span>
+            <span>
+                .
+            </span>
+            <span>
+                T
+            </span>
+            <span>
+                H
+            </span>
+            <span>
+                O
+            </span>
+            <span>
+                N
+            </span>
+            <span>
+                G
+            </span>
+           </h1>
+    </header>
+    <div class="app">
+        <input placeholder="Type hier iets.." type="text" class="user-input">
+        <button class="action-btn">ACTION</button>
+        <p class="result"></p>
+        <section class="wrapper">
+            <div class="block block-a">
+                
+            </div>
+            
+            <div class="block block-b">
+                
+            </div>
+            <div class="block block-c">
+                
+            </div>
+            
+        </section>
+    </div>
+    <footer>
+        <p>Mijn portfolio wordt ook aangeboden in het <a href="#">Engels</a> </p>
+    </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>
