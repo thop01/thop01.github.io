@@ -10,11 +10,14 @@ appsLink.addEventListener("click", toggleAppList);
 
 function action(){
     const resultView = document.querySelector(".result")
-    let result = `U zocht op: "${userInput.value}", maar ik weet niet wat u probeerd te vinden. `
+    let result = `U zocht op: "${userInput.value}", maar ik weet niet wat u probeert te vinden. `
     const uur = Number(userInput.value);
     // if ochtend...
     resultView.textContent = result;
-    userInput.value = ""
+    userInput.value = "";
+    setTimeout(()=>{
+        resultView.textContent = ""   
+    }, 1500);
 }
 
 function onKeyDown(e){

@@ -1,6 +1,7 @@
 body,html{
     padding:0;
     margin:0;
+    /* font-family: monospace; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     overflow:hidden;
 }
@@ -8,9 +9,10 @@ body,html{
     width:150vh;
     height:150vh;
     position:absolute;
-    background:hsl(360, 0%, 99%);
+    /* background:hsl(360, 0%, 99%); */
     z-index:-1;
     border-radius: 50%;
+    background:hsl(210, 65%, 98%);
 }
 
 nav{
@@ -20,6 +22,7 @@ nav{
     /* background:green; */
     gap:1rem;
     padding: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav span{
@@ -28,6 +31,7 @@ nav span{
 
 nav span:hover{
     /* line-height: 3rem; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: underline;
 }
 
@@ -42,7 +46,7 @@ nav button{
 h1{
     text-align: center;
     font-size: 3rem;
-    /* background:black; */
+    font-family: sans-serif;
 }
 
 h1 span:nth-child(1){
@@ -65,6 +69,13 @@ h1 span:nth-child(6){
 }
 h1 span:nth-child(7){
     color:hsl(210, 65%, 50%);
+}
+
+span:hover{
+    
+    font-family: monospace;
+    font-size: 1.1em;
+    cursor:grab;
 }
 
 .app{
