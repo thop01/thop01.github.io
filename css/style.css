@@ -1,3 +1,9 @@
+:root {
+    --mainColor: 210;
+    --accent: calc(var(--mainColor) - 170);
+  }
+  
+
 body,html{
     padding:0;
     margin:0;
@@ -12,7 +18,7 @@ body,html{
     /* background:hsl(360, 0%, 99%); */
     z-index:-1;
     border-radius: 50%;
-    background:hsl(210, 65%, 98%);
+    background:hsl(var(--mainColor), 65%, 98%);
 }
 
 nav{
@@ -23,6 +29,25 @@ nav{
     gap:1rem;
     padding: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.slidecontainer{
+    flex:1;
+}
+.slidecontainer > .colorSlider{
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 50px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+
+    /* transform: rotate(-45deg); */
+
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    /* margin-top:10px; */
+    /* background: black; */
 }
 
 nav span{
@@ -38,7 +63,7 @@ nav span:hover{
 nav button{
     font-size: 1rem;
     padding:0.66rem;
-    background:#123456;
+    background:hsl(var(--mainColor), 65%, 20%);
     color:white;
     border-radius: 5px;
 }
@@ -47,28 +72,29 @@ h1{
     text-align: center;
     font-size: 3rem;
     font-family: sans-serif;
+    color:hsl(var(--mainColor), 65%, 20%);
 }
 
 h1 span:nth-child(1){
-    color:hsl(210, 65%, 20%);
+    color:hsl(var(--mainColor), 65%, 20%);
 }
 h1 span:nth-child(2){
-    color:hsl(210, 65%, 25%);
+    color:hsl(var(--mainColor), 65%, 25%);
 }
 h1 span:nth-child(3){
-    color:hsl(210, 65%, 30%);
+    color:hsl(var(--mainColor), 65%, 30%);
 }
 h1 span:nth-child(4){
-    color:hsl(210, 65%, 35%);
+    color:hsl(var(--mainColor), 65%, 35%);
 }
 h1 span:nth-child(5){
-    color:hsl(210, 65%, 40%);
+    color:hsl(var(--mainColor), 65%, 40%);
 }
 h1 span:nth-child(6){
-    color:hsl(210, 65%, 45%);
+    color:hsl(var(--mainColor), 65%, 45%);
 }
 h1 span:nth-child(7){
-    color:hsl(210, 65%, 50%);
+    color:hsl(var(--mainColor), 65%, 50%);
 }
 
 span:hover{
@@ -93,6 +119,8 @@ span:hover{
     border-radius: 1rem;
     width:100%;
     border:1px solid gray;
+    
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.692));
 }
 
 .app input:hover{
@@ -167,13 +195,13 @@ span:hover{
 .label{
     width:fit-content;
     height:2rem;
-    background:#AB6B00;
     position:absolute; 
     transform: rotate(-90deg);
     top:calc(50vh - 50px);
     right:-2.3rem;
     padding:10px;
-    color:white;
+    color:black;
+    background:hsl(var(--accent), 100%, 46%);
 }
 
 .label:hover{
@@ -186,4 +214,9 @@ footer{
 
 a:visited, a{
     color:#123456;
+}
+
+span::first-letter{
+    color:hsl(var(--accent), 100%, 46%);
+    font-size: 1.6em;
 }

@@ -12,8 +12,11 @@
     <div class="bg"></div>
     <header>
         <nav> 
+            <!-- <div class="slidecontainer">
+                <input type="range" min="1" max="360" value="210" step="5" class="colorSlider" id="colorSlider">
+              </div> -->
             <span>Projecten</span> <span>Afbeeldingen</span> <span class="link-apps">Apps</span> <button>Inloggen</button>
-            <div class="apps-list hide">
+            <section class="apps-list hide">
                 <div>
                   <img src="./img/stopwatch.svg" alt="">
                   <p>StopWatch</p>
@@ -38,16 +41,21 @@
                     <img src="./img/fingerprint.svg" alt="">
                     <p>ID-Scan</p>
                 </div>
-            </div>
+            </section>
+        
           
         </nav>
         <h1>
+           <!-- <span>https://classroom.github.com/a/qg4fTe1Y</span>
+            <span>B</span><span>T</span><span>W</span> -->
             <span>P</span><span>.</span><span>T</span><span>H</span><span>O</span><span>N</span><span>G</span>
            </h1>
     </header>
     <div class="app">
-        <input placeholder="Type hier iets.." type="text" class="user-input">
-        <button class="action-btn">ACTION</button>
+        <!-- <div class="autocomplete"> -->
+            <input placeholder="Type hier iets.." type="text" class="user-input" id="ac">
+      <!-- </div> -->
+      <button class="action-btn">ACTION</button>
         <p class="result"></p>
         <section class="wrapper">
             <div class="block block-a">
@@ -66,6 +74,7 @@
     <footer>
         <p>Mijn portfolio wordt ook aangeboden in het <a href="#">Engels</a> </p>
     </footer>
+    <script src="./js/autocomplete.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
