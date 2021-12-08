@@ -5,17 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
     <title>P.Thong</title>
 </head>
 <body>  
     <div class="label">OVER MIJ</div>
+    <div class="sidebar profile hide">
+       <div class="images">
+           <img class="profilepic first" src="./img/profilepic.png" alt="">
+           <img class="profilepic second" src="./img/profilepic.png" alt="">
+           <img class="profilepic third" src="./img/profilepic.png" alt="">
+
+       </div>
+        <h2>Pascal Thong</h2>
+        <p>Ik ben Pascal Thong uit de jaren 90. 
+            Op dit moment geef ik les in software development aan MBO4 studenten. 
+            Na jaren werken in het onderwijs merk ik dat ik mij minder bezig houdt met de nieuwste ict-bedrijfstechnologien.
+            Daarom zou ik tijdens de schoolvakantie graag ICT opdrachten willen uitvoeren.  
+        </p>
+
+        <h2>Intressante skills</h2>
+        <p>Javascript, Angular, VueJS, React, nodeJS, Git, SQL, NoSqL, Mobile Apps, agile software development</p>
+        <h2>Hobies</h2>
+        <p>Longboarden, zonnen, Monkey</p>
+        <h2>Contact gegevens</h2>
+        <p>Email: p.thong@rocmondriaan.nl</p>
+            
+   
+        </div>
     <div class="bg"></div>
     <header>
         <nav> 
             <!-- <div class="slidecontainer">
                 <input type="range" min="1" max="360" value="210" step="5" class="colorSlider" id="colorSlider">
               </div> -->
-            <span>Projecten</span> <span>Afbeeldingen</span> <span class="link-apps">Apps</span> <button>Inloggen</button>
+              <span class="link-profile">Profile</span>
+              <span class="link-apps">Apps</span> 
+              <!-- <span>Bullshit</span>  -->
+               <button>Inloggen</button>
             <section class="apps-list hide">
                 <div>
                   <img src="./img/stopwatch.svg" alt="">
@@ -41,13 +68,12 @@
                     <img src="./img/fingerprint.svg" alt="">
                     <p>ID-Scan</p>
                 </div>
-            </section>
-        
-          
+            </section>  
         </nav>
         <h1>
            <!-- <span>https://classroom.github.com/a/qg4fTe1Y</span>
             <span>B</span><span>T</span><span>W</span> -->
+        
             <span>P</span><span>.</span><span>T</span><span>H</span><span>O</span><span>N</span><span>G</span>
            </h1>
     </header>
@@ -55,24 +81,24 @@
         <!-- <div class="autocomplete"> -->
             <input placeholder="Type hier iets.." type="text" class="user-input" id="ac">
       <!-- </div> -->
-      <button class="action-btn">ACTION</button>
+      <button class="action-btn">doSomething();</button>
         <p class="result"></p>
-        <section class="wrapper">
+        <div class="wrapper">
             <div class="block block-a">
-                
+                a
             </div>
             
             <div class="block block-b">
-                
+              b  
             </div>
             <div class="block block-c">
-                
+                c
             </div>
             
-        </section>
+        </div>
+        <p>Mijn portfolio wordt ook aangeboden in het <a href="#">Engels</a> </p>
     </div>
     <footer>
-        <p>Mijn portfolio wordt ook aangeboden in het <a href="#">Engels</a> </p>
     </footer>
     <script src="./js/autocomplete.js"></script>
     <script src="./js/main.js"></script>

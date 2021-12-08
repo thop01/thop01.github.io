@@ -1,17 +1,29 @@
 :root {
     --mainColor: 210;
     --accent: calc(var(--mainColor) - 170);
+    --accent2: calc(var(--mainColor) + 170);
   }
-  
+*{
+    box-sizing: border-box;
+}  
 
 body,html{
     padding:0;
     margin:0;
     /* font-family: monospace; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    overflow:hidden;
+    overflow-x:hidden;
+    /* filter:hue-rotate(30deg); */
+
 }
+/* body{
+    transform:scale(0.8);
+    border:5px dotted green;
+
+} */
+
 .bg{
+    
     width:150vh;
     height:150vh;
     position:absolute;
@@ -19,6 +31,44 @@ body,html{
     z-index:-1;
     border-radius: 50%;
     background:hsl(var(--mainColor), 65%, 98%);
+}
+
+.profile{
+    position: absolute;
+    background-color:hsl(var(--accent2), 50%, 90%);
+    border-right: 5px solid hsl(var(--accent2), 100%, 20%);
+    color:hsl(var(--accent2), 100%, 20%);;
+    width:300px;
+    height: 100%;
+    text-align: center;
+    padding-top:50px;
+    z-index:1;
+}
+.profile .profilepic{
+    width:80px;
+    height:80px;
+  
+   filter: drop-shadow(0px 0px 10px hsl(var(--accent2), 100%, 20%));
+   /* filter: drop-shadow(0px 0px 10px black); */
+}
+.profilepic.first{
+    border-radius: 50% 10% 10% 10%;
+}
+.profilepic.second{
+    border-radius:10%;
+}
+.profilepic.third{
+    border-radius: 10% 10% 50% 10%;
+}
+
+.sidebar h2{
+    font-size: 1em;
+}
+
+.sidebar p{
+    font-size: 0.8em;
+    text-align: left;
+    margin:12px;
 }
 
 nav{
@@ -56,7 +106,7 @@ nav span{
 
 nav span:hover{
     /* line-height: 3rem; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     text-decoration: underline;
 }
 
@@ -97,7 +147,7 @@ h1 span:nth-child(7){
     color:hsl(var(--mainColor), 65%, 50%);
 }
 
-span:hover{
+h1 span:hover{
     
     font-family: monospace;
     font-size: 1.1em;
@@ -220,3 +270,22 @@ span::first-letter{
     color:hsl(var(--accent), 100%, 46%);
     font-size: 1.6em;
 }
+
+
+.autocomplete-items {
+    color:hsl(var(--accent2), 100%, 20%);
+  }
+
+  .autocomplete-items div {
+    cursor: pointer; 
+  }
+
+  .autocomplete-items div:hover {
+    background:hsl(var(--accent2), 100%, 50%);
+  }
+  
+  .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: hsl(var(--accent2), 100%, 50%) !important;
+    color: #ffffff;
+  }

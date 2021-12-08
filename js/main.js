@@ -1,7 +1,12 @@
 console.log("main is laoded");
+let color = 210;
+color = ((new Date().getHours() * 60 + new Date().getMinutes()) / 4).toFixed();
+console.log(`The color is ${color}`);
+document.documentElement.style.setProperty('--mainColor', color);
 const actionButton = document.querySelector(".action-btn");
 const userInput = document.querySelector(".user-input");
 const appsLink = document.querySelector(".link-apps");
+const profileLink = document.querySelector(".link-profile");
 const slider = document.querySelector(".colorSlider");
 if(slider){
     slider.addEventListener("change", (e) => {    
@@ -16,10 +21,23 @@ document.body.addEventListener("click", (e)=>{
 });
 
 actionButton.addEventListener("click", action);
-userInput.addEventListener("keypress", onKeyDown);
+// userInput.addEventListener("keypress", onKeyDown);
 appsLink.addEventListener("click", toggleAppList);
-    
-
+profileLink.addEventListener("click", toggleHideProfile);
+let mousedown = false;
+document.querySelector(".sidebar").addEventListener("mousedown", (e)=>{
+    mousedown = true;
+});
+document.querySelector(".sidebar").addEventListener("mouseup", (e)=>{
+    mousedown= false;
+    });
+    document.querySelector(".sidebar").addEventListener("mousemove", (e)=>{
+        if(mousedown){
+            console.log(e);
+            document.querySelector(".sidebar").style.width = e.screenX + "px";
+        }
+     
+    });
 
 function action(){
     const resultView = document.querySelector(".result")
@@ -35,6 +53,9 @@ function action(){
             const color = Number(userInput.value);
             resultView.textContent = "Kleur is veranderd";
             document.documentElement.style.setProperty('--mainColor', color);
+            break;
+        case "profile":
+            document.querySelector(".profile").classList.toggle("hide");
             break;
         default:
             document.querySelector("h1").textContent = userInput.value;
@@ -52,12 +73,13 @@ function action(){
     applist.classList.add("hide");
 }
 
-function onKeyDown(e){
-    console.log(e)
-    if(e.key == "Enter"){
-        action();
-    }
-}
+// function onKeyDown(e){
+//     console.log(e);
+//     console.log("test")
+//     if(e.key == "Enter"){
+       
+//     }
+// }
 
 
 function toggleAppList(e){
@@ -67,6 +89,12 @@ function toggleAppList(e){
 
 }
 
+
+function toggleHideProfile(e){
+    const profile = document.querySelector(".profile");
+    profile.classList.toggle("hide");
+
+}
 
 
 function openCloseAppList(e){
