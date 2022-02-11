@@ -39,6 +39,7 @@ document.querySelector(".sidebar").addEventListener("mouseup", (e)=>{
      
     });
 
+
 function action(){
     const resultView = document.querySelector(".result")
     let result = `U zocht op: "${userInput.value}", maar ik weet niet wat u probeert te vinden. `
@@ -56,6 +57,10 @@ function action(){
             break;
         case "profile":
             document.querySelector(".profile").classList.toggle("hide");
+            break;
+        case "c":
+            console.log("a")
+            window.open('cesuur.html');
             break;
         default:
             document.querySelector("h1").textContent = userInput.value;

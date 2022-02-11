@@ -102,7 +102,7 @@ if (document.getElementById("ac")) {
     "JS if", "JS for", "JS functions", "JS Random",
     "Java", "Javascript", "JavaPT", "green", 
     "123", "234", "345", "456", "567", "678", "789", 
-    "timer 5", "timer 6", "profile"
+    "timer 5", "timer 6", "profile", "cesuur"
   ];
   autocomplete(document.getElementById("ac"), valies);
 }
