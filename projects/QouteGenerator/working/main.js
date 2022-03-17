@@ -3,18 +3,37 @@ let index = 0;
 
 button.addEventListener("click", showQoute);
 
+
 const qoutes = [
-    "Your time is limited, so don't waste it living someone else's life",
-    "The way to get started is to quit talking and begin doing.",
-    "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    {
+        qoute: "Your time is limited, so don't waste it living someone else's life",
+        author: "steve jobs",
+        color: "green",
+    },
+    {
+        qoute: "The way to get started is to quit talking and begin doing.",
+        author: "Walt Disney",
+        color: "red",
+    },
+    {
+        qoute: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+        author: "Nelson Mandela",
+        color: "blue"
+    },
 ];
+
+
+
 showQoute();
 
 
 function showQoute(){
     const qouteView = document.querySelector("p.qoute");
+    const authorView = document.querySelector("p.author");
     const randomNumber = Math.floor(Math.random()*qoutes.length);
-    qouteView.textContent = qoutes[randomNumber];
+    qouteView.textContent = qoutes[randomNumber].qoute;
+    authorView.textContent = qoutes[randomNumber].author;
+    document.body.style.background = qoutes[randomNumber].color;
 }
 
 const prevButton = document.querySelector("button.prev");

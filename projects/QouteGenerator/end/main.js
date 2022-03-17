@@ -17,6 +17,7 @@ const qoutes = [
         author: "Nelson Mandela"
     },
 ];
+
 showQoute();
 
 

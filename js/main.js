@@ -65,7 +65,6 @@ function action(){
         default:
             document.querySelector("h1").textContent = userInput.value;
             resultView.textContent = result;
-
     }
     
 
