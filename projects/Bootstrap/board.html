@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./css/morph.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title>Hello, world!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .min-vh-40 {
+            min-height: 40vh;
+        }
+    </style>
+</head>
+
+<body class="s">
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1>Board</h1>
+            </div>
+            <nav class="col">
+                <div class="nav nav-tabs justify-content-end" id="project-menu" role="tablist">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="false">
+                        Home
+                    </button>
+                    <button class="nav-link" id="board-tab" data-bs-toggle="tab" data-bs-target="#board" role="tab"
+                        aria-controls="board">Portfolio</button>
+                    <button class="nav-link" onclick="doSomething()">╰(*°▽°*)╯</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="tab-content" id="project-content">
+        <section class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tab-pane fade" id="board" role="tabpanel" aria-labelledby="board-tab">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Product backlog</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">In de product-backlog staan alle taken in grote lijnen</p>
+                                <ul class="list-group">
+                                    <li class="list-group-item">Sprint 1: Je eerste pagina</li>
+                                    <li class="list-group-item">Sprint 2: Afbeeldingen</li>
+                                    <li class="list-group-item">Sprint 3: Semantische tags</li>
+                                </ul>
+                                <button class="btn btn-primary m-1">+</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Todo</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">In de todo schrijf je alle taken van een sprint</p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item"> Je vraagt de naam van je bezoeker met een prompt</li>
+                                    <li class="list-group-item">Bedenk een aantal Qoutes en toon deze op je pagina</li>
+                                    <li class="list-group-item">Teken een wireframe voor jouw portfolio</li>
+                                    <li class="list-group-item">Maak de opdrachten uit hoofdstuk 1 en 2 van het
+                                        HTML-boek</li>
+                                    <li class="list-group-item">*Bonus: Je begroet de bezoeker bij zijn naam in jou
+                                        portfolio</li>
+                                </ul>
+                                <button class="btn btn-primary m-1">+</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Doing</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Hier plaats je de todo's waarmee je bezig bent</p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">Je hebt jouw naam in een h1-tag geplaats</li>
+                                    <li class="list-group-item">Je hebt jouw naam met css een mooie kleur gegeven</li>
+
+                                </ul>
+                                <button class="btn btn-primary m-1">+</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="col-12 col-md-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Done</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">In de todo schrijf je alle taken van een sprint</p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item"> Maak een github-account met een herleidbare naam</li>
+                                    <li class="list-group-item"> Maak een github-repository</li>
+                                </ul>
+                                <button class="btn btn-primary m-1">+</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+
+        const css = document.querySelector("link");
+        const integrity = css.integrity;
+
+        const themeSelector = document.querySelector("#theme-selector");
+        themeSelector.addEventListener("change", function (e) {
+            const chosen = e.target.value;
+            if (chosen != "Default") {
+                css.integrity = "";
+                css.href = `./css/${chosen}.css`;
+            } else {
+                css.integrity = integrity;
+                css.href = `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css`;
+
+            }
+
+        });
+
+        function doSomething() { alert('hi') }
+
+
+
+
+        console.log(css);
+    </script>
+</body>
+
+</html>

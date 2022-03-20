@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title>Hello, world!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .min-vh-40 {
+            min-height: 40vh;
+        }
+    </style>
+</head>
+
+<body class="s">
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1>Board</h1>
+            </div>
+            <nav class="col">
+                <div class="nav nav-tabs justify-content-end" id="project-menu" role="tablist">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="false">
+                        Home
+                    </button>
+                    <button class="nav-link" id="board-tab" data-bs-toggle="tab" data-bs-target="#board"
+                        role="tab" aria-controls="board">Portfolio</button>
+                        <button class="nav-link" onclick="doSomething()">╰(*°▽°*)╯</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="tab-content" id="project-content">
+        <section class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <h2>Home</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem, suscipit ab sed sit quod. Accusantium nam adipisci temporibus molestiae, repudiandae accusamus dicta odio, quibusdam ullam quisquam a iure maxime?</p>
+                    </div>
+                </div>     
+            </div>
+        </section>
+        <section class="tab-pane fade" id="board" role="tabpanel" aria-labelledby="board-tab">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                       <h2>Board</h2>
+                       <p>Something</p>
+                   </div>
+                </div>     
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+
+        const css = document.querySelector("link");
+        const integrity = css.integrity;
+
+        const themeSelector = document.querySelector("#theme-selector");
+        themeSelector.addEventListener("change", function(e){
+            const chosen = e.target.value;
+            if(chosen != "Default"){
+                css.integrity="";
+                css.href = `./css/${chosen}.css`;
+            }else{
+                css.integrity = integrity;
+                css.href = `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css`;
+
+            }
+           
+        });
+
+        function doSomething(){alert('hi')}
+
+
+
+
+        console.log(css);
+    </script>
+</body>
+
+</html>
