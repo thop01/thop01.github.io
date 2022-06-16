@@ -31,7 +31,7 @@
 
 
 
-
+function startGame(){
 
 let user;
 let credits;
@@ -111,3 +111,4 @@ while(credits > 0){
 
 alert(`Oops! helemaal geen credits meer. U score is van het gehele spel is ${counter}`);
 
+}

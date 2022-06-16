@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <style>
-        /* body{
-            background:#f2f2f2;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .container{
-            max-width: 800px;
-            margin:auto;
-            background: moccasin;
-        }
-        header{
-            text-align: center;
-            padding: 1em;
-            border-bottom: 0.5em dashed lightgrey;
-        } */
-    </style>
+    <link rel="stylesheet" href="style/index.css">
 </head>
+
 <body>
-    <div class="container p-4">
+    <div class="container">
         <header class="text-center">
             <h1>Hoger Lager <sup>V1</sup></h1>
         </header>
-        <div class="row">
-            
-        </div>
+        <main>
+            <div class="dices">
+                &#9856; &#9857; &#9858; <<>> &#9859; &#9860; &#9861;
+            </div>
+            <div class="message">
+                <p>Gooi je dubbelsteen en speel het spel!</p>
+            </div>
+            <div class="controls">
+                <button>
+                    Gooi dobbelsteen
+                </button>
+                <button>
+                    Hoger
+                </button>
+                <input type="number" name="bet" id="bet" value="10">
+                <button>
+                    Lager
+                </button>
+                <button onclick="startGame()">
+                    GO
+                </button>
+            </div>
+        </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
