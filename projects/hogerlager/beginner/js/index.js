@@ -21,7 +21,9 @@
 
 
 
-
+function sayHello(){
+    alert("Hoi" +  prompt("wat is jou rol?","student"));
+}
 
 
 
@@ -83,7 +85,7 @@ while(credits > 0){
     }else if(userAnswer.localeCompare("H") == 0 && spelerDubbelStenen.reduce((partialSum, a) => partialSum + a, 0) < bankDubbelStenen.reduce((partialSum, a) => partialSum + a, 0)){
         credits += 2;
         alert(`Goed geraden! \n
-        Je wint 3 credit \n
+        Je wint 3 credit \n3
         Je huidige credits is ${credits}
         `);
     }else if(userAnswer.localeCompare("H") == 0 && spelerDubbelStenen.reduce((partialSum, a) => partialSum + a, 0) > bankDubbelStenen.reduce((partialSum, a) => partialSum + a, 0)){
@@ -112,3 +114,5 @@ while(credits > 0){
 alert(`Oops! helemaal geen credits meer. U score is van het gehele spel is ${counter}`);
 
 }
+
+startGame();

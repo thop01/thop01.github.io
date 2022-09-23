@@ -9,11 +9,13 @@ const appsLink = document.querySelector(".link-apps");
 const profileLink = document.querySelector(".link-profile");
 const slider = document.querySelector(".colorSlider");
 if(slider){
-    slider.addEventListener("change", (e) => {    
+    slider.addEventListener("change", (e) => {   
+    
         document.documentElement.style.setProperty('--mainColor', slider.value);
     });
 }
 document.body.addEventListener("click", (e)=>{
+
     if(!e.target.classList.contains("link-apps")){
         const applist = document.querySelector(".apps-list");
         applist.classList.add("hide");
@@ -27,12 +29,15 @@ profileLink.addEventListener("click", toggleHideProfile);
 let mousedown = false;
 document.querySelector(".sidebar").addEventListener("mousedown", (e)=>{
     mousedown = true;
+  
 });
 document.querySelector(".sidebar").addEventListener("mouseup", (e)=>{
     mousedown= false;
+   
     });
     document.querySelector(".sidebar").addEventListener("mousemove", (e)=>{
         if(mousedown){
+         
             console.log(e);
             document.querySelector(".sidebar").style.width = e.screenX + "px";
         }
@@ -41,6 +46,7 @@ document.querySelector(".sidebar").addEventListener("mouseup", (e)=>{
 
 
 function action(){
+  
     const resultView = document.querySelector(".result")
     let result = `U zocht op: "${userInput.value}", maar ik weet niet wat u probeert te vinden. `
     switch(userInput.value){
@@ -95,6 +101,7 @@ function toggleAppList(e){
 
 
 function toggleHideProfile(e){
+
     const profile = document.querySelector(".profile");
     profile.classList.toggle("hide");
 
@@ -102,11 +109,13 @@ function toggleHideProfile(e){
 
 
 function openCloseAppList(e){
+
     console.log(e);
 }
 
 
 document.body.addEventListener("mousemove", (e)=>{
+
     const bg = document.querySelector(".bg");
     bg.style.left = `${e.x-500}px`;
     bg.style.top = `${e.y-500}px`;

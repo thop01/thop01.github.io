@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sokoban</title>
+    <style>
+        /* 
+        Userstorie: Als developer wil ik een mooi responsive achtergrond, zodat ik kan pronken met mijn werk */
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .main-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .main-container > div.start-screen {
+            padding:15px;
+            background:#f2f2f2;
+        }
+        div.start-screen sup{
+            display:none;
+        }
+
+        button{
+            padding:15px;
+            width:100%;
+            /* margin:10px;         */
+        }
+
+        li{
+            list-style: none;
+        }
+        li.selected::before { content: '>'; margin-left: -10px; margin-right: 10px; } 
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <div class="start-screen">
+            <h1>Sokoban</h1>
+            <button class="start-button">Come in!</button>
+            <ul>
+                <li class="selected">1 Player <sup>Beta</sup></li>
+                <li>2 Player <sup>Coming soon</sup> </li>
+                <!-- <li>Online Big party <sup>Comes someday</sup> </li> -->
+                <hr>
+                <li>Scoreboard <sup>Coming soon</sup></li>
+                <li>Options <sup>Coming soon</sup></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function startGame(){
+            console.log('The game is getting started');
+        }
+        function onArrowDown(){
+            const optionsListItems = document.querySelectorAll('.start-screen li');
+           outer: for (let key in optionsListItems) {
+                key = Number(key);
+                const optionListItem =optionsListItems[key];
+                // console.log(optionListItem)
+                // debugger;
+                if(optionListItem.classList.contains("selected")) {
+                    optionListItem.classList.toggle("selected");
+                     if(key === optionsListItems.length-1){
+                        key = -1;
+                     } 
+                     key++;
+                    optionsListItems[key].classList.toggle("selected");
+                    break outer;
+                }
+           }
+        }
+
+        document.body.onload = () =>{
+            console.log("The start screen is loaded.")
+            const startButton = document.querySelector('.start-button');
+            
+            startButton.addEventListener('click', startGame);
+            // document.body.addEventListener('keyup', on)
+            onkeyup = (e) =>{
+                    console.log(`u pressed ${e.key}`)
+                    switch(e.key){
+                        case "ArrowDown":
+                            onArrowDown();
+                            break;
+                        default: console.log("nothing happens")
+                    }
+                }
+        }
+
+
+    </script>
+</body>
+
+</html>
