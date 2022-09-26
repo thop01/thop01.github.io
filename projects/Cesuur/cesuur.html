@@ -6,23 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Cecuur</title>
 </head>
 
 <body>
+    <h1>Genereer cijfertabel</h1>
     <form id="grades">
         <div class="input-cesuur">
-            <label for="behaald">Behaald aantal punten</label>
-            <input id="behaald" type="number" value="42" />
-            <br>
-            <label for="max">Max aantal punten</label>
-            <input id="max" type="number" value="42" />
-            <br>
-            <label for="start-cijfer">Start cijfer</label>
-            <input id="start-cijfer" type="number" value="1" />
-            <br>
-            <button type="submit" class="calculate">Calculate</button>
+            <div class="input">
+                <label for="behaald">Behaald aantal punten</label> <br>
+                <input id="behaald" type="number" value="42" />
+            </div>
+            <div class="input">
+                <label for="max">Max aantal punten</label> <br>
+                <input id="max" type="number" value="42" />
+            </div>
+            <div class="input">
+                <label for="start-cijfer">Start cijfer</label> <br>
+                <input id="start-cijfer" type="number" value="1" />
+            </div>
         </div>
+        <button type="submit" class="calculate">Calculate</button>
     </form>
     <p>Resultaat = <span class="result"></span></p>
     <table class="result-list">
