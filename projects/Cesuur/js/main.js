@@ -17,10 +17,12 @@ function generateGrade() {
         r.textContent = rr.toFixed(1);
 
         rList.innerHTML = ` 
-            <tr>
-                <th>Punten</th>
-                <th>Cijfer</th>
-            </tr>`;
+                        <thead>
+                            <tr>
+                                <th>Punten</th>
+                                <th>Cijfer</th>
+                            </tr>
+                        </thead>`;
         for (let i = 0; i <= mm; i++) {
             rList.innerHTML += ` <tr>
                                     <td>${i}</td>
