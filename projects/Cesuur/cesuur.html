@@ -1,61 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Cecuur</title>
 </head>
+
 <body>
-    <div class="input-cesuur">
-        <label for="behaald">Behaald aantal punten</label>
-        <input id="behaald" type="number" value="42" />    
-        <br>
-        <label for="max">Max aantal punten</label>
-        <input id="max" type="number" value="42" />    
-        <br>
-        <label for="start-cijfer">Start cijfer</label>
-        <input id="start-cijfer" type="number" value="1" />    
-        <br>
-        <button class="calculate">Calculate</button>
+    <h1>Genereer cijfertabel</h1>
+    <form id="grades">
+        <div class="input-cesuur">
+            <div class="input">
+                <label for="behaald">Behaald aantal punten</label> <br>
+                <input id="behaald" type="number" value="42" />
+            </div>
+            <div class="input">
+                <label for="max">Max aantal punten</label> <br>
+                <input id="max" type="number" value="42" />
+            </div>
+            <div class="input">
+                <label for="start-cijfer">Start cijfer</label> <br>
+                <input id="start-cijfer" type="number" value="1" />
+            </div>
+        </div>
+        <button type="submit" class="calculate">Calculate</button>
+    </form>
+    <div id="gradeResults">
+        <p>Resultaat = <span class="result"></span></p>
+        <table class="result-list">
+
+        </table>
     </div>
-    <p>Resultaat = <span class="result"></span></p>
-    <table class="result-list">
-
-    </table>
-
-    <script>
-         const b = document.querySelector("#behaald");
-         const m = document.querySelector("#max");
-         const x = document.querySelector("#start-cijfer");
-         const btn = document.querySelector(".calculate");
-         const r = document.querySelector(".result");
-         const rList = document.querySelector(".result-list");
-         btn.addEventListener("click", ()=>{
-             console.log(
-                 123
-             );
-             const bb = Number(b.value);
-             const mm = Number(m.value);
-             const xx = Number(x.value);
-             const rr = bb/mm * (10-xx) + xx;
-             r.textContent =rr.toFixed(1);
-             
-            rList.innerHTML = ` 
-            <tr>
-                <th>Punten</th>
-                <th>Cijfer</th>
-            </tr>`;
-            for (let i = 0; i <= mm; i++) {
-                rList.innerHTML += ` <tr>
-                                        <td>${i}</td>
-                                        <td>${(i/mm * (10-xx) + xx).toFixed(1)}</td>
-                                    
-                                    </tr>`     ;      
-            }
-
-         });
-
-    </script>
 </body>
+
 </html>
