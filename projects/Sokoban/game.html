@@ -30,6 +30,19 @@
             padding:15px;
             background:#f2f2f2;
         }
+
+        .board{
+            display:grid;
+            grid-template-columns: repeat(7, 50px);
+            grid-template-rows: repeat(6, 50px);
+            border:10px double black;
+            font-size: 20pt;
+            text-align: center;
+        }
+        .board>div{
+            border: 2px dotted black;
+
+        }
     </style>
 </head>
 <body>
@@ -37,8 +50,16 @@
 
         <div class="game-screen">
             <h1>Sokoban</h1>
+            <div class="board">
 
+            </div>
         </div>
     </div>
+    <script>
+
+    
+    </script>
+
+
 </body>
 </html>

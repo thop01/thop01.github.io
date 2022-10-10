@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Profiel toevoegen</legend>
+        <form id="add-form">
+            <label for="firstname">voornaam: </label><br>
+            <input id="firstname" name="firstname" type="text" minlength="2" required><br>
+            <label for="lastname">achternaam: </label><br>
+            <input id="lastname" name="lastname" type="text" minlength="2" required><br>
+            <label for="birthday">Geboortedatum</label><br>
+            <input type="date" name="birthday" id="birthday">
+            <br>
+            <input class="submit-button" type="submit" value="Voeg toe">
+        </form>
+    </fieldset>
+    <fieldset class="profiles">
+        <legend>Profiles</legend>
+    </fieldset>
+
+<script>
+    let profiles = JSON.parse(localStorage.getItem("profiles")) || [];
+    showProfiles();
+    const form = document.querySelector("#add-form");
+    form.addEventListener("submit", function(){
+        profiles.push({
+            firstname: document.querySelector("#firstname").value,
+            lastname: document.querySelector("#lastname").value,
+            birthday: document.querySelector("#birthday").value
+        });
+        localStorage.setItem("profiles", JSON.stringify(profiles));
+        // showProfiles();
+    })
+
+    function showProfiles(){
+        const profilesElement = document.querySelector(".profiles");
+        for(let p of profiles){
+            profilesElement.innerHTML +=`
+                <fieldset>
+                    <legend>${p.firstname} ${p.lastname}</legend>
+                    
+                    </fieldset>
+            `;
+        }
+    }
+</script>
+
+</body>
+</html>

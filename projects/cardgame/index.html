@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Document</title>
+   <style>
+      *{
+         margin:0;
+         padding:0;
+      }
+      body {
+         background: green;
+         background-image: url("img/bg2.webp");
+         color: white;
+      }
+
+      img {
+         width: 100px;
+         margin: 10px;
+      }
+
+      h1 {
+         text-transform: capitalize;
+         text-align: center;
+         text-decoration: underline;
+      }
+
+      h3 {
+         text-transform: uppercase;
+         text-align: center;
+      }
+
+      div.dealer-cards, div.player-cards {
+         border: 5px solid gray;
+         width: 400px;
+         height:140px;
+         margin: auto;
+      }
+
+      div.dealer-cards>img , div.player-cards>img  {
+         width: 80px;
+      }
+
+      div.dealer-cards>img:nth-child(1) ,   div.player-cards>img:nth-child(1){
+         margin-left: 10px;
+      }
+
+      div.dealer-cards>img, div.player-cards>img {
+         margin-left: -78px;
+      }
+
+      #wrapper{
+         display:flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+         height:100vh;
+      }
+      header, footer{
+         background: rgba(12,12,12,0.5);
+         height:50px;
+         padding:10px;
+         text-align: center;
+      }
+      .margin-top{
+         margin-top:10px;
+      }
+      .margin-bottom{
+         margin-bottom:10px;
+      }
+
+      button{
+         height:50px;
+         width:100px;  
+      }
+   </style>
+   <script src="js/main.js" type="module" defer></script>
+</head>
+
+<body>
+   <div id="wrapper">
+      
+      <header>
+
+         <h1>- Black Jack - </h1>
+      </header>
+      <h3 class="margin-top">Dealer</h3>
+      <div class="dealer-cards">
+         <img src="img/cards/2_of_hearts.svg" alt="" srcset="">
+         <!-- <img src="img/cards/2_of_hearts.svg" alt="" srcset="">
+         <img src="img/cards/2_of_hearts.svg" alt="" srcset="">
+         <img src="img/cards/2_of_hearts.svg" alt="" srcset=""> -->
+         <!-- <img src="img/cards/ace_of_hearts.svg" alt="" srcset="">
+            <img src="img/cards/ace_of_hearts.svg" alt="" srcset="">
+            <img src="img/cards/ace_of_hearts.svg" alt="" srcset=""> -->
+      </div>
+      <div class="mid"><br></div>
+      <div class="player-cards">
+         <!-- <img src="img/cards/2_of_hearts.svg" alt="" srcset="">
+         <img src="img/cards/2_of_hearts.svg" alt="" srcset="">
+         <img src="img/cards/2_of_hearts.svg" alt="" srcset="">
+         <img src="img/cards/2_of_hearts.svg" alt="" srcset=""> -->
+         <!-- <img src="img/cards/ace_of_hearts.svg" alt="" srcset="">
+               <img src="img/cards/ace_of_hearts.svg" alt="" srcset="">
+               <img src="img/cards/ace_of_hearts.svg" alt="" srcset=""> -->
+      </div>
+      <h3 class="margin-bottom">Player</h3>
+      <footer>
+         <button>HIT</button>
+
+      </footer>
+   </div>
+</body>
+
+</html>

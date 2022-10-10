@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(233, 243, 255);
+            background: radial-gradient(circle, rgba(233, 243, 255, 1) 0%, rgba(209, 230, 255, 1) 100%);
+            background-color: ;
+            /* background-image: url("img/bg.jpeg"); */
+        }
+
+        #wrapper {
+            width: 888px;
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr;
+            gap: 8px;
+            padding: 8px;
+            margin: 10px auto;
+        }
+
+        header {
+            grid-column: 1/3;
+        }
+
+        aside {
+            grid-column: 3/4;
+            grid-row: 1/5;
+        }
+
+        footer {
+            grid-column: 1/4;
+        }
+
+        .standard-border {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        img {
+            width: 40%;
+            display:flex;
+            align-self: center;
+        }
+
+        td,
+        th {
+            padding: 10px;
+        }
+
+        header,
+        article,
+        aside,
+        footer {
+            background-color: hsla(235, 10%, 50%, .2);
+            /* background:whitesmoke; */
+        }
+
+        /* article {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 6%, rgba(0, 162, 195, 1) 21%, rgba(0, 212, 255, 1) 100%);
+            background: rgb(232, 244, 255);
+            background: radial-gradient(circle, rgba(232, 244, 255, 1) 0%, rgba(194, 226, 255, 1) 83%, rgba(129, 192, 255, 1) 100%);
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="wrapper" class="standard-border">
+        <header class="standard-border">
+            <h1>Web Development</h1>
+        </header>
+        <aside class="standard-border">
+            <h2>Index</h2>
+            <nav>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                </ul>
+            </nav>
+        </aside>
+        <article class="standard-border">
+            <img src="img/js.png" alt="">
+        </article>
+        <article class="standard-border">
+            <h2>Javascript</h2>
+            <ol>
+                <li>Queryselector</li>
+                <li>EventListeners</li>
+                <li>Date-Object</li>
+                <li>Intervals</li>
+                <li>Timeout</li>
+                <li>WebStorage</li>
+                <li>Style-Object</li>
+                <li>Modules & Classes</li>
+                <li>JSON</li>
+                <li>API's</li>
+
+            </ol>
+        </article>
+        <article class="standard-border">
+            <h2>HTML 5</h2>
+            <ul>
+                <li>Semantische tags</li>
+                <li>data-attributen</li>
+                <li>video's afspelen</li>
+                <li>Muziek afspelen</li>
+                <li>Tabeltjes maken</li>
+
+            </ul>
+        </article>
+        <article class="standard-border">
+            <img src="img/html.png" alt="">
+        </article>
+        <article class="standard-border">
+            <img src="img/css.png" alt="">
+        </article>
+        <article class="standard-border">
+            <table border="6">
+                <tr>
+                    <th>Attributen</th>
+                    <th>Values</th>
+                </tr>
+                <tr>
+                    <td>display</td>
+                    <td>flex, grid, none, block, inline-block</td>
+                </tr>
+                <tr>
+                    <td>grid-template-columns</td>
+                    <td>1fr 1fr 2fr</td>
+                </tr>
+                <tr>
+                    <td>grid-column</td>
+                    <td>1/4</td>
+                </tr>
+            </table>
+        </article>
+        <footer class="standard-border">blablaba</footer>
+    </div>
+</body>
+
+</html>
