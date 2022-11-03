@@ -64,6 +64,23 @@ function playerHit(){
     const cardElement = document.createElement("img");
     cardElement.src = "img/cards/"+card;
     playerHandEl.appendChild(cardElement);
+    calcPoints(playerHand);
+}
+
+function calcPoints(hand){
+    console.log(hand);
+    let points = 0;
+    for(let card of hand){
+        let value = card.split("_")[0];
+        let pattern = /\d/g;
+        let isDigit = pattern.test(value);
+        if(isDigit){
+            points += Number(value);
+        } else{
+            points += 10;
+        }
+    }
+    console.log(points);
 }
 
 

@@ -24,8 +24,8 @@ document.body.addEventListener("click", (e)=>{
 
 actionButton.addEventListener("click", action);
 // userInput.addEventListener("keypress", onKeyDown);
-appsLink.addEventListener("click", toggleAppList);
-profileLink.addEventListener("click", toggleHideProfile);
+if (appsLink) appsLink.addEventListener("click", toggleAppList);
+if (profileLink) profileLink.addEventListener("click", toggleHideProfile);
 let mousedown = false;
 document.querySelector(".sidebar").addEventListener("mousedown", (e)=>{
     mousedown = true;

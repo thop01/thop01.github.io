@@ -218,25 +218,29 @@ h1 span:hover{
 
 
 .wrapper{
-    width:100%;
-    height:10rem;
-    display:flex;
-    justify-content: space-evenly;
+    max-width:1000px;
+    /* background:black; */
+    height: 9rem;
+    overflow: auto;
+    /* display:flex; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
 }
 
 .wrapper .block{
-    width:6.9rem;
-    height:6.9rem;
-    background: hsl(360, 0%, 95%);
+    width:120px;
+    height:120px;
+    display: inline-block;
+    /* float: left; */
+    background: hsla(360, 0%, 95%, 0.5);
 }
 
 .block:hover{
     background: hsl(360, 0%, 100%);
 }
 
-.block-b{
-    transform:rotate(45deg)
-}
 
 .result{
     height:2rem;
