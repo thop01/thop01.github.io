@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.level {
+  font-size: .8em;
+  font-weight: normal;
+  padding-top: .5em;
+  margin-left: -2em;
+}
+
+.title {
+  font-size: .8em;
+  font-weight: normal;
+  padding-top: .5em;
+}
+
+body {
+  background-color: #2f2f2f;
+  background-image: url(../img/lvl2clo.jpg);
+  background-size: 110%;
+  font-family: Algerian Regular;
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  height: 100vh;
+  display: flex;
+}
+
+.lock {
+  width: 5vw;
+  background-color: rgba(223, 223, 223, 0.253);
+  position: absolute;
+  left: 35vw;
+  top: 15.46em;
+  height: 17vh;
+  z-index: 10;
+  border-radius: 20px;
+}
+
+.lock.disable {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.lock:hover {
+  cursor: pointer;
+}
+
+.game {
+  width: 25em;
+  height: 17em;
+  margin-top: 2em;
+  margin-left: 8em;
+  background-color: rgba(211, 211, 211, 0.432);
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 10px;
+  transition: 0.5s all ease-out;
+}
+
+.game.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.game header {
+  width: 25em;
+  height: 2em;
+  background-color: rgba(0, 0, 0, 0.685);
+  display: grid;
+  padding: .2em;
+  grid-template-columns: repeat(4, 25%);
+
+}
+
+.game header .dificulty {
+  margin-top: .2em;
+  width: fit-content;
+}
+
+.game header .timer {
+  padding-top: .9em;
+  width: fit-content;
+  margin-left: -3em;
+  font-size: .6em;
+}
+
+.game main {
+  margin-left: 5em;
+  margin-top: 1em;
+  width: 15em;
+  height: 13em;
+  background-color: rgba(2, 2, 15, 0.459);
+
+}

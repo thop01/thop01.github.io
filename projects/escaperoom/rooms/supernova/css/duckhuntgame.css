@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-image: url(../img/bk.png);
+    background-size: 1580px;
+}
+
+.container {
+    width: 100%;
+    height: 870px;
+    text-align: center;
+}
+
+#a {
+    color: #fff;
+    background-color: black;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 15px;
+    margin-top: 230px;
+    display: none;
+}
+
+#duck1,
+#duck2,
+#duck3,
+#duck4 {
+    width: 100px;
+    position: relative;
+    display: block;
+}
+
+#duck1 {
+    animation: move 4s infinite ease-in-out
+}
+
+#duck2 {
+    animation: move1 4s infinite ease-in-out
+}
+
+#duck3 {
+    animation: move2 4s infinite ease-in-out
+}
+
+#duck4 {
+    animation: move3 4s infinite ease-in-out
+}
+
+/* this keyframes section */
+
+@keyframes move {
+    0% {
+        top: 30%;
+        left: 15%
+    }
+
+    20% {
+        top: 40%;
+        left: 20%;
+    }
+
+    40% {
+        top: 30%;
+        left: 30%;
+    }
+
+    60% {
+        top: 30%;
+        left: 50%;
+    }
+
+    80% {
+        top: 50%;
+        left: 80%;
+    }
+
+    100% {
+        top: 15%;
+        left: 1000%;
+    }
+}
+
+@keyframes move1 {
+    0% {
+        top: 50%;
+        left: 10%
+    }
+
+    20% {
+        top: 30%;
+        left: 40%;
+    }
+
+    40% {
+        top: 30%;
+        left: 60%;
+    }
+
+    60% {
+        top: 50%;
+        left: 50%;
+    }
+
+    80% {
+        top: 50%;
+        left: 70%;
+    }
+
+    100% {
+        top: 30%;
+        left: 1000%;
+    }
+}

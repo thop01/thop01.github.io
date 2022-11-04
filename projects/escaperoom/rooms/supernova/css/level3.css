@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.level {
+    font-size: .8em;
+    font-weight: normal;
+    padding-top: .5em;
+    margin-left: -2em;
+}
+
+.title {
+    font-size: .8em;
+    font-weight: normal;
+    padding-top: .5em;
+}
+
+body {
+    background-color: #2f2f2f;
+    background-image: url(../img/lvl3clo.jpg);
+    background-size: 110%;
+    font-family: Algerian Regular;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    background-repeat: no-repeat;
+}
+
+.lock {
+    width: 5vh;
+    background-color: rgba(223, 223, 223, 0.253);
+    position: absolute;
+    left: 58vw;
+    top: 9.1em;
+    height: 15vh;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+
+.lock.disable {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lock:hover {
+    cursor: pointer;
+}
+
+.lock.disable {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lock:hover {
+    cursor: pointer;
+}
+
+.game {
+    width: 25em;
+    height: 17em;
+    margin-top: 2em;
+    margin-left: 8em;
+    background-color: rgba(211, 211, 211, 0.432);
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+    transition: 0.5s all ease-out;
+}
+
+.game.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.game header {
+    width: 25em;
+    height: 2em;
+    background-color: rgba(0, 0, 0, 0.685);
+    display: grid;
+    padding: .2em;
+    grid-template-columns: repeat(4, 25%);
+
+}
+
+.game header .dificulty {
+    margin-top: .2em;
+    width: fit-content;
+}
+
+.game header .timer {
+    padding-top: .9em;
+    width: fit-content;
+    margin-left: -3em;
+    font-size: .6em;
+}
+
+.game .sideimg {
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    margin: 0.8em;
+    margin-top: 0.99em;
+    background-image: url(../img/unnamed.png);
+    background-color: black;
+    float: left;
+    background-size: cover;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.game main {
+    margin-left: 5em;
+    margin-top: 1em;
+    width: 15em;
+    height: 13em;
+    background-color: rgba(2, 2, 15, 0.459);
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 3px; */
+    border: 2px solid white;
+}
+
+/* .game main div{
+    background-color: black; 
+}
+.bg{
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.bg:hover{
+    filter: brightness(1.5);
+    cursor: pointer;
+}
+.bg0{
+    background-image: url(../img/momogrids/0.jpg);
+}.bg1{
+    background-image: url(../img/momogrids/1.jpg);
+}.bg2{
+    background-image: url(../img/momogrids/2.jpg);
+}.bg3{
+    background-image: url(../img/momogrids/3.jpg);
+}.bg4{
+    background-image: url(../img/momogrids/4.jpg);
+}.bg5{
+    background-image: url(../img/momogrids/5.jpg);
+}.bg6{
+    background-image: url(../img/momogrids/6.jpg);
+}.bg7{
+    background-image: url(../img/momogrids/7.jpg);
+}.bg8{
+    background-image: url(../img/momogrids/8.jpg);
+} */
+#table {
+    height: 13em;
+    width: 15em;
+}
+
+.tile1,
+.tile2,
+.tile3,
+.tile4,
+.tile5,
+.tile6,
+.tile7,
+.tile8,
+.tile9 {
+    display: table-cell;
+    border: 1px solid white;
+    cursor: pointer;
+
+}
+
+.tile1 {
+    background-position: left top;
+    background: url(../img/momogrids/0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tile2 {
+    background-position: center top;
+    background: url(../img/momogrids/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tile3 {
+    background-position: right top;
+    background: url(../img/momogrids/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tile4 {
+    background-position: left center;
+    background: url(../img/momogrids/3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tile5 {
+    background-position: center center;
+    background: url(../img/momogrids/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tile6 {
+    background-position: right center;
+    background: url(../img/momogrids/5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tile7 {
+    background-position: left bottom;
+    background: url(../img/momogrids/6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tile8 {
+    background-position: center bottom;
+    background: url(../img/momogrids/7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tile9 {
+    background: white;
+    cursor: default;
+}
+
+main button {
+    position: absolute;
+    height: 5em;
+    width: 10em;
+    margin-left: -15em;
+    margin-top: -30em;
+}

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.level {
+    font-size: .8em;
+    font-weight: normal;
+    padding-top: .5em;
+    margin-left: -2em;
+}
+
+.title {
+    font-size: .8em;
+    font-weight: normal;
+    padding-top: .5em;
+}
+
+body {
+    background-color: #2f2f2f;
+    background-image: url(../img/lvl1clo.jpg);
+    background-size: 110%;
+    font-family: Algerian Regular;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+}
+
+.lock {
+    width: 5vw;
+    background-color: rgba(223, 223, 223, 0.253);
+    position: absolute;
+    right: 10vw;
+    top: 16.66em;
+    height: 11vh;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+.lock.disable {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lock:hover {
+    cursor: pointer;
+}
+
+.game {
+    width: 25em;
+    height: 17em;
+    margin-top: 2em;
+    margin-left: 8em;
+    background-color: rgba(211, 211, 211, 0.432);
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+    transition: 0.5s all ease-out;
+}
+
+.game.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.game header {
+    width: 25em;
+    height: 2em;
+    background-color: rgba(0, 0, 0, 0.685);
+    display: grid;
+    padding: .2em;
+    grid-template-columns: repeat(4, 25%);
+
+}
+
+.math {
+    display: flex;
+    justify-content: center;
+    padding-top: 25vh;
+}
+
+.num {
+    border-radius: 10px;
+    margin: 0 .5em;
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+
+.game main {
+    margin-left: 5em;
+    margin-top: 1em;
+    width: 15em;
+    height: 13em;
+    background-color: rgba(2, 2, 15, 0.459);
+    position: relative;
+}
+
+.equal {
+    margin-right: .5em;
+}
+
+.ansr.active {
+    margin-top: 1.5em;
+    font-size: .3em;
+}
+
+.continuousBtn {
+    background-color: transparent;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    width: 7em;
+    height: 3.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.continuousBtn a {
+    color: white;
+    text-decoration: none;
+}
+
+.continuousBtn.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.user {
+    width: 5em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-family: Algerian Regular;
+    outline: none;
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+}
+
+.user.disable {
+    visibility: hidden;
+    opacity: 0;
+}

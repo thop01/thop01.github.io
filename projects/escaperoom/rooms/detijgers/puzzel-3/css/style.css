@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0 ;
+}
+
+body{ 
+    background-image: url(../img/hd-winter-achtergrond-met-ijs-bomen-en-sneeuw-op-de-oever-hd-winter-wallpaper-foto.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+a {
+    text-decoration: none;
+}
+
+#clear{  
+    width: 150px;
+    margin: 10px;
+    border: 3px solid red;  
+    border-radius: 3px;  
+    padding: 10px;  
+    background-color: red;  
+}  
+  
+.formstyle{  
+    width: 170px;  
+    height: 390px;  
+    margin-left: 300px;
+    margin-top: 300px;
+    border: 3px solid red;  
+    border-radius: 5px;  
+    padding: 10px;  
+    float: left;
+    background-color: white;
+}  
+  
+input {  
+    width: 15px;  
+    background-color: green;  
+    color: white;  
+    border: 3px solid red;  
+    border-radius: 4px;  
+    padding: 14px;  
+    margin: 5px;  
+    font-size: 15px; 
+    text-align: center;  
+}  
+
+#wrapperbtns {
+   background-color: khaki;
+   padding: 10px;
+}
+  
+  
+#calc{  
+    width: 130px;  
+    border: 5px solid red;  
+    border-radius: 3px;  
+    padding: 15px;  
+    margin: auto;  
+} 
+
+#calc::placeholder {
+    font-size: 50pt;
+}
+
+img{ 
+    width: 700px; 
+    float: right;
+    margin: 100px;
+    margin-right: 350px;
+    padding: 15px;
+}
+
+.sommen{ 
+    border: 5px solid red; 
+    width: 150px;
+    height: 250px;
+    float: right;
+    margin-top: 350px;
+    background-color: white;
+}
+
+#next {
+    margin: 0;
+    margin-top: 100px;
+    margin-left: 25px;
+    border: 5px darkgreen solid;
+    border-radius: 15px;
+    width: 175px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    background-color: red;
+    transition: 0.3s;
+    color: black;
+    
+
+}
+
+#next:hover {
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.hide.show {
+    display: block;
+}

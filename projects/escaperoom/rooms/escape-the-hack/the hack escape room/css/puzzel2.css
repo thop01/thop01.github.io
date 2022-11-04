@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    float: right;
+    border-bottom-left-radius: 5px;
+    width: 250px;
+}
+
+body {
+    background-image: url(../img/matrix-hacker-dark-background-vector-13239447.jpg);
+}
+
+article {
+font-size: 100px;
+color: lightblue;
+position: absolute;
+left: 700px;
+bottom: 300px;
+}
+
+button {
+    padding: 5px;
+    font-size: 20px;
+}

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+img {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-bottom-left-radius: 5px;
+    width: 250px;
+}
+body {
+    background-image: url(../img/matrix-hacker-dark-background-vector-13239447.jpg);
+}
+.article1 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 250px;
+}
+
+a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+a:hover {
+    color: lightblue;
+    transition: 0.8s;
+}
+
+.article2 {
+    text-align: center;
+    padding-top: 125px;
+}
+
+p{
+    background-color: black;
+    padding-bottom: 10px;
+}
+
+h1{
+    background-color: black;
+}

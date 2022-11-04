@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="group" content="De Tijgers">
+
+    <title>Puzzel 2: code combinatie</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+
+</head>
+
+<body>
+
+    <img class="locked" src="img/locked.png" alt="rendier">
+    <img class="free hide" src="img/freeeeee.png" alt="">
+
+
+
+    <div class="sommen">
+
+        <h2>Reken de sommen uit</h2>
+
+        <p>
+            1. 4x16
+            <br>
+            2. 5x32
+            <br>
+            3. 25x0.8
+            <br>
+            4. 200:12,5
+        </p>
+    </div>
+    <div class="formstyle">
+        <form name="form1">
+            <input id="calc" type="text" name="answer" placeholder="-----"> <br> <br>
+            <div id="wrapperbtns">
+                <input type="button" value="1" onclick="form1.answer.value += '1' ">
+                <input type="button" value="2" onclick="form1.answer.value += '2' ">
+                <input type="button" value="3" onclick="form1.answer.value += '3' ">
+                <br>
+
+                <input type="button" value="4" onclick="form1.answer.value += '4' ">
+                <input type="button" value="5" onclick="form1.answer.value += '5' ">
+                <input type="button" value="6" onclick="form1.answer.value += '6' ">
+                <br>
+
+                <input type="button" value="7" onclick="form1.answer.value += '7' ">
+                <input type="button" value="8" onclick="form1.answer.value += '8' ">
+                <input type="button" value="9" onclick="form1.answer.value += '9' ">
+                <br>
+
+                <input type="button" value="." onclick="form1.answer.value += '.' ">
+                <input type="button" value="0" onclick="form1.answer.value += '0' ">
+
+                <input class="answer" type="button" value="=">
+
+                <br>
+            </div>
+            <input type="button" value="Clear All" id="clear">
+            <br>
+        </form>
+
+        <a href="puzzel-1/puzzle-1.html" class="next hide"><h2 id="next">Next</h2></a>
+    </div>
+
+</body>
+
+</html>

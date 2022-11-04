@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #141414;
+    background-image: url(../img/hacker\ achtergrond.png);
+}
+
+img {
+    float: right;
+    border-bottom-left-radius: 5px;
+}
+
+.img2 {
+    text-align: center;
+    padding-top: 200px;
+    padding-right: 625px;
+    filter: brightness(40%);
+}
+
+p {
+    background-color: black;
+    color: green;
+    font-size: 40px;
+    padding: 10px;
+    width: 500px;
+    text-align: center;
+    margin-top: 450px;
+    margin-left: 700px;
+}
+
+
+
+
+
+
+
