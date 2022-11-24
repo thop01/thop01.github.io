@@ -1,0 +1,31 @@
+body{
+    margin:auto;
+    /* background:gray; */
+    text-align: center;
+    position: relative;
+}
+
+.slot{
+    position: relative;
+    width:350px;
+    height:350px;
+    margin:auto;
+    background:green;
+    /* transform: scale(0.5); */
+}
+
+
+.img-slot{
+    position:absolute;
+    width:100%;
+    top:0p;
+    left:0px;
+}
+
+.img-slot2{
+    position:absolute;
+    width:165px;
+    top:172px;
+    left:93px;
+    transform: rotate(0deg);
+}

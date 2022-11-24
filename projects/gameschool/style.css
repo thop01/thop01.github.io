@@ -1,4 +1,37 @@
 .screen{
-    height:100vh;
+    min-height:100vh;
+
 }
+
+.screen:nth-child(2){
+    /* background-color:black; */
+
+    margin-right:10px;
+}
+
+h2, .border{
+    border: 20px solid transparent;
+    /* padding: 15px; */
+    /* width:600px; */
+    border-image: url(img/border.png) 30 round;
+    background:bisque;
+}
+
+#front-page{
+    background-image: url(img/jeshoots-com-eCktzGjC-iU-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.agp{
+    border-left: 3px solid blue;
+}
+
+.bpg{
+    border-left: 3px solid red;
+}
+
 

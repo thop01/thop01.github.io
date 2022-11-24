@@ -17,11 +17,11 @@ document.body.addEventListener("keyup", (event)=>{
         next();
         break;
     case "ArrowRight":
-    case "KeyJ":
+    case "KeyL":
         next();
         break;
     case "ArrowLeft":
-    case "KeyL":
+    case "KeyJ":
         previous();
         break;
     case "Minus":
@@ -37,13 +37,20 @@ document.body.addEventListener("keyup", (event)=>{
 
 function next(){
     console.log("next");
-    if(++screenIndex == screens.length) screenIndex = screenIndex.length-1;
+    if(++screenIndex == screens.length) {
+        screenIndex = screenIndex.length-1;
+    }
     screens[screenIndex].scrollIntoView({behavior: "smooth", inline: "nearest"});
 
 }
 
 function previous(){
     console.log("previous");
+    if(--screenIndex == -1) {
+        screenIndex = 0;
+    }
+    screens[screenIndex].scrollIntoView({behavior: "smooth", inline: "nearest"});
+
 }
 
 function zoomOut(){
