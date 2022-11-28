@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&family=Monoton&family=Montagu+Slab:opsz@16..144&family=Pacifico&family=Rubik+Microbe&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #ffeae3;
+    padding: 20px;
+}
+
+#wrapper {
+    background-color: #fcfdff;
+    width: 510px;
+    padding: 10px;
+    margin: auto;
+    background: black;
+}
+
+header {
+    grid-area: h;
+    background-color: #9fa2b2;
+    /* width: 510px; */
+    /* height: 40px; */
+    /* margin-bottom: 10px; */
+}
+
+article {
+    background-color: #c0ccb5;
+    /* width: 120px; */
+    /* height: 120px; */
+    /* margin: 0 10px 10px 0; */
+    text-align: center;
+    /* cursor: pointer; */
+    /* float: left; */
+}
+
+article:hover {
+    background-color: #FFEAE3 !important;
+}
+
+#sidebar {
+    background-color: #FFEAE3;
+    /* width: 120px; */
+    /* height: 380px; */
+    /* margin-bottom: 10px; */
+    /* float: right; */
+    text-align: center;
+}
+
+footer {
+    /* clear: both; */
+    background-color: #505810;
+    /* width: 510px; */
+    /* height: 40px; */
+}
+
+
+#wrapper,
+header,
+#sidebar,
+footer,
+article {
+    border-radius: 5px;
+}
+
+/* article:nth-child(odd){
+background-color:blue;
+}  */
+
+article:nth-child(2),
+article:nth-child(4),
+article:nth-child(7),
+article:nth-child(9),
+article:nth-child(11) {
+    background-color: #9ba492;
+}
+
+article:nth-child(7) {
+    box-sizing: border-box;
+
+
+}
+
+
+
+#box {
+    margin: 100px;
+}
+
+#box>div {
+    width: 50px;
+    height: 50px;
+    background: green;
+
+}
+
+h1 {
+    font-family: 'Rubik Microbe', cursive;
+    text-align: center;
+    padding: 10px;
+    font-size: 25pt;
+}
+
+.msg{
+    color:white;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+@media screen and (min-width:800px) {
+    #wrapper{
+        display:grid;
+        grid-template-columns: 120px 120px 120px 120px;
+        grid-template-rows: 40px 120px 120px 120px 40px;
+        /* grid-auto-rows: minmax(120px, auto); */
+       gap:10px;
+    }
+
+    header{
+        grid-row:       1/2;
+        grid-column:    1/5;
+        /* grid-area: 1/1/2/5; */
+    }
+
+    #sidebar{
+        grid-column: 4/5;
+        grid-row:2/5;
+    }
+    footer{
+        grid-column: 1/5;
+    }
+
+
+}
