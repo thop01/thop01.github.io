@@ -1,0 +1,12 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+    height:100vh;
+}
+
+.wrapper{
+    padding:25px;
+    border-left:4px solid black;
+}

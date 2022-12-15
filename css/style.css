@@ -275,6 +275,10 @@ span::first-letter{
     font-size: 1.6em;
 }
 
+h2::first-letter{
+    color:hsl(var(--mainColor), 65%, 40%);
+}
+
 
 .autocomplete-items {
     color:hsl(var(--accent2), 100%, 20%);

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Advance</title>
+    <style>
+
+.outer-wrapper{
+    box-sizing: border-box;
+    border: 10px solid green;
+    width:800px;
+    margin:auto;
+    /* width:40vw */
+}
+
+.wrapper{
+    display:grid;
+    grid-template-columns: [main-start] 2fr [content-start] 1fr [content-end] 1fr [main-end];
+    grid-template-rows: [main-start] minmax(100px, auto) [content-start] minmax(100px, auto) [content-end] minmax(100px, auto) [main-end];
+    /* grid-auto-rows: minmax(30px, auto); */
+    gap:3px;
+    border:10px solid yellow;
+    width:100%;
+    box-sizing: border-box;
+}
+
+.box{
+    border:3px solid black;
+    box-sizing: border-box;
+}
+
+.b1{
+    grid-column-start: main-start;
+    grid-row-start:main-start;
+    grid-row-end: main-end;
+}
+
+.b2{
+    grid-column-start: content-end;
+    grid-row-start: main-start;
+    grid-row-end: content-end;
+}
+
+.b3{
+    grid-column-start: content-start;
+    grid-row-start: main-start;
+}
+.b5{
+    grid-column-start: content-start;
+    grid-row-start: content-end;
+    grid-column-end: main-end;
+}
+
+.overlay{
+    grid-column: 2/4;
+    grid-row: 1 / 3;
+    background: rgba(0,0,0,1);
+    color:white;
+    /* z-index:2; */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="outer-wrapper">
+
+        <div class="wrapper">
+            <div class="box b1">1</div>
+            <div class="box b2">2</div>
+            <div class="box b3">3</div>
+            <div class="box b4 overlay">X</div>
+            <div class="box b5">5</div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".overlay").addEventListener("click", function(){
+            this.style.display = "none";
+        });
+    </script>
+</body>
+</html>

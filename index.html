@@ -1,239 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+    <title>Pascal Thong</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/sidebar.css">
-    <title>P.Thong - Thongs Things with Strings</title>
-</head>
-<body>  
-    <div class="hero">
-        <!-- <img class="hero" src="img/duck.svg" alt=""> -->
-        <svg width="150px" height="150px" viewBox="0 0 150 150" id="ART" 
-   xmlns="http://www.w3.org/2000/svg">
-   <defs>
-      <style>
-      .cls-1,.cls-2{
-    fill:#ffc533;
-}
-.cls-1,.cls-2,.cls-3,.cls-4{
-    stroke:#000;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 60s linear forwards;
-}
-@keyframes dash {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-
-
-
-
-.cls-1{
-    stroke-linecap:round;
-    stroke-linejoin:round;
-}
-.cls-1,.cls-3{
-    stroke-width:2px;
-}
-.cls-2,.cls-3,.cls-4{
-    stroke-miterlimit:10;
-}
-.cls-2,.cls-4{
-    stroke-width:4px;
-}
-.cls-3{
-    fill:#fff;
-}
-.cls-4{
-    fill:#ea6726;
-}
-</style>
-   </defs>
-   <title/>
-   <path class="cls-1" d="M69.31,19.83C66.65,15,63.58,6.39,60,5.29c6.17.07,14,3.81,15.56,9,1.91-5.95,7-5.95,10.25-6.17-4.92,4.4-5.25,8.81-5.25,10.8S70.48,22,69.31,19.83Z"/>
-   <path class="cls-2" d="M136.24,94.23c0,28.23-35.47,44.1-61.24,44.1s-61.24-15.86-61.24-44.1C13.76,82,22,74,28.35,61,38.11,41,42.27,17.17,75,17.17S111.89,41,121.65,61C128,74,136.24,82,136.24,94.23Z"/>
-   <ellipse class="cls-3" cx="52.48" cy="60.75" rx="15.94" ry="10.12" transform="translate(-16.66 101.53) rotate(-79.71)"/>
-   <ellipse cx="52.4" cy="66.69" rx="6.96" ry="5.39" transform="translate(-22.58 106.33) rotate(-79.71)"/>
-   <ellipse class="cls-3" cx="97.52" cy="60.75" rx="10.12" ry="15.94" transform="translate(-9.29 18.4) rotate(-10.29)"/>
-   <ellipse cx="97.6" cy="66.69" rx="5.39" ry="6.96" transform="translate(-10.35 18.51) rotate(-10.29)"/>
-   <path class="cls-4" d="M118.82,114.66c-8.73,13.53-6.28,29-45.94,29-36.53,0-34.27-15.52-42.32-29-5-8.42-9.87-15.56-5.64-19.27s16.65-.26,25.44-.26,9.92-13.91,22.52-13.91c13.69,0,14.91,13.91,24.45,13.91s22.9-3.54,27.62.26S124.25,106.24,118.82,114.66Z"/>
-   <path d="M58.6,105.94c-1.71-3-1.25-5.24.38-6.17s3.8-.19,5.51,2.79,2.31,7.09.68,8S60.31,108.92,58.6,105.94Z"/>
-   <path d="M91.4,105.94c1.71-3,1.25-5.24-.38-6.17s-3.8-.19-5.51,2.79-2.31,7.09-.68,8S89.69,108.92,91.4,105.94Z"/>
-</svg>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .hero{
-            position:absolute;
-            top:10px;
-            left:10px;
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
         }
     </style>
+</head>
 
-    
+<body class="w3-light-grey w3-content" style="max-width:1600px">
 
-
-    </div>
-
-
-
-
-
-    <div class="label">OVER MIJ</div>
-    <div class="sidebar profile hide">
-       <div class="images">
-           <img class="profilepic first" src="./img/profilepic.png" alt="">
-           <img class="profilepic second" src="./img/profilepic.png" alt="">
-           <img class="profilepic third" src="./img/profilepic.png" alt="">
-       </div>
-        <h2>Pascal Thong</h2>
-        <p>Ik ben Pascal Thong uit de jaren 90. 
-            Op dit moment geef ik les in software development aan MBO4 studenten. 
-            Na jaren werken in het onderwijs merk ik dat ik mij minder bezig houdt met de nieuwste ict-bedrijfstechnologien.
-            Daarom zou ik tijdens de schoolvakantie graag ICT opdrachten willen uitvoeren.  
-        </p>
-
-        <h2>Intressante skills</h2>
-        <p>Javascript, Angular, VueJS, React, nodeJS, Git, SQL, NoSqL, Mobile Apps, agile software development</p>
-        <h2>Hobies</h2>
-        <p>Longboarden, zonnen, Monkey</p>
-        <h2>Contact gegevens</h2>
-        <p>Email: p.thong@rocmondriaan.nl</p>
-            
-   
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+                title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <img src="img/profilegpic.gif" style="width:45%;border-radius: 50%;" class="w3-round"><br><br>
+            <h4><b>Pascal Thong</b></h4>
+            <p class="w3-text-grey">Agile Software Development Teacher</p>
         </div>
-    <div class="bg"></div>
-    <header>
-        <nav> 
-              <span class="link-profile">Profile</span>
-              <span class="link-profile">Mindmap</span>
-              <span class="link-profile">Kwaliteiten</span>
-              <!-- <span class="link-apps">Apps</span> 
-  
-               <button>Inloggen</button>
-            <section class="apps-list hide">
-                <div>
-                <a href="./projects/QouteGenerator/end/index.html">
-                  <img src="./img/qg.png" alt="">
-                  <p>Qoute generator</p>
-                </a>
-                </div>
-                <div>
-                    <a href="./projects/Cesuur/cesuur.html">
-                    <img src="./img/hammer.svg" alt="">
-                    <p>Cesuur</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="./projects/Bootstrap/school.html">
-                    <img src="./img/music-note.svg" alt="">
-                    <p>School</p>
-                    </a>
-                </div>
-                <div>
-                    <img src="./img/pencil.svg" alt="">
-                    <p>Writer</p>
-                </div>
-                <div>
-                    <img src="./img/puzzle.svg" alt="">
-                    <p>Sokoban</p>
-                </div>
-                <div>
-                    <img src="./img/fingerprint.svg" alt="">
-                    <p>ID-Scan</p>
-                </div>
-            </section>   -->
-        </nav>
-        <div id="messages">
-            <span id="text1"></span>
-            <span id="text2"></span>
+        <div class="w3-bar-block">
+            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
+                <i class="fa fa-th-large fa-fw w3-margin-right"></i>
+                PORTFOLIO
+            </a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-user fa-fw w3-margin-right"></i>
+                ABOUT
+            </a>
+            <a href="#work-of-students" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-bug fa-fw w3-margin-right"></i>
+                WORK OF STUDENTS</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-envelope fa-fw w3-margin-right"></i>
+                CONTACT</a>
         </div>
-        
-<svg id="filters">
-    <defs>
-        <filter id="threshold">
-            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
-									0 1 0 0 0
-									0 0 1 0 0
-									0 0 0 255 -140" />
-        </filter>
-    </defs>
-</svg>
-        <link rel="stylesheet" href="css/anima.css">
-        <script src="js/anima.js"></script>
-        <h1>
-           <!-- <span>https://classroom.github.com/a/qg4fTe1Y</span>
-            <span>B</span><span>T</span><span>W</span> -->
-            <span>P</span><span>.</span><span>T</span><span>H</span><span>O</span><span>N</span><span>G</span>
-           </h1>
-    </header>
-    <div class="app">
-        <!-- <div class="autocomplete"> -->
-            <input placeholder="Type hier iets.." type="text" class="user-input" id="ac">
-      <!-- </div> -->
-      <button class="action-btn">doSomething();</button>
-        <p class="result"></p>
-        All apps
-        <div class="wrapper">
-            <div class="block">
-                <a href="/projects/hogerlager/medium/index.html">
-                    <img src="./img/hl.png" alt="" srcset="">
+        <div class="w3-panel w3-large">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+            <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+            <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Header -->
+        <header id="portfolio">
+            <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
+                    class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+                    class="fa fa-bars"></i></span>
+            <div class="w3-container">
+                <h1><b>P. Thong</b></h1>
+                <div class="w3-section w3-bottombar w3-padding-16">
+                    <span class="w3-margin-right">Filter:</span>
+                    <button class="w3-button w3-black">ALL</button>
+                    <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Projects</button>
+                    <button class="w3-button w3-white w3-hide-small"><i
+                            class="fa fa-photo w3-margin-right"></i>Prototypes</button>
+                    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Lesson
+                        Demo's</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding">
+            <style>
+                html{scroll-behavior:smooth}
+                a{
+                    text-decoration: none;
+                }
+            </style>
+            <div class="w3-third w3-container w3-margin-bottom">
+                <a href="projects/Cesuur/cesuur.html" target="_blank">
+                <img src="img/berekeningcesuur.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Cesuur</b></p>
+                    <p>
+                        The assessment pass mark serves as an important benchmark for students, indicating the minimum
+                        level of performance that is required in order to successfully complete the assessment. It also
+                        provides a clear and objective standard by which students can gauge their own progress and
+                        performance, and it allows institutions to accurately evaluate the effectiveness of their
+                        assessments.
+                    </p>
+                </div>
+            </a>
+            </div>
+            <div class="w3-third w3-container w3-margin-bottom">
+                <a href="projects/bke/index.html" target="_blank">
+                <img src="img/bke.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Tic Tac Toe</b></p>
+                    <p>
+                        Tic-tac-toe is a simple and classic two-player game. It is also known as noughts and crosses or Xs and Os.
+                    </p>
+                </div>
                 </a>
             </div>
-            <div class="block">
-                <a href="/projects/bke/index.html">
-                    <img src="./img/bke.png" alt="" srcset="">
+
+            <div class="w3-third w3-container">
+                <a href="projects/Bootstrap/school.html" target="_blank">
+                <img  src="img/huisbaliPNG.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>My bootstrap playground</b></p>
+                    <p>A bootstrap playground is a place where developers and designers can experiment with the Bootstrap framework to create responsive, mobile-first web applications and websites. </p>
+                </div>
                 </a>
             </div>
-            <div class="block">
-                <a href="/projects/Cesuur/cesuur.html">
-                    <img src="./img/cesuur.png" alt="" srcset="">
-                </a>
-            </div>
-            <div class="block">
-                <a href="projects/QouteGenerator/end/index.html">
-                    <img src="./img/qoute.png" alt="" srcset="">
-                </a>
-            </div>
-            <!-- <div class="block">
-              Cesuur
-            </div>
-            <div class="block">
-              <p>asdfa
-                asdfaasdf
-                af
-                asdfdfk
-              </p>
-                <a href="projects/hogerlager/beginner/index.html"> 
-             
-             </a>
-            </div>
-            <div class="block">
-                Boter kaas en Eieren
-            </div>
-            <div class="block">
-                E
-            </div>
-            <div class="block">
-                F
-            </div>
-            <div class="block">
-                G
-            </div>
-            <div class="block">
-                H
+
+         
+
+        </div>
+
+        <!-- Second Photo Grid-->
+        <div class="w3-row-padding">
+
+            <!-- <div class="w3-third w3-container w3-margin-bottom">
+                <img src="img/kleurenschema.PNG" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Lorem Ipsum</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                        ultricies congue gravida diam non fringilla.</p>
+                </div>
             </div> -->
-            
+
+            <div class="w3-third w3-container">
+                <a href="v1.html" target="_blank">
+                <img  src="img/v1.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>My old portfolio</b></p>
+                    <p>My old portfolio playground </p>
+                </div>
+                </a>
+            </div>
+
+            <div class="w3-third w3-container">
+                <a href="projects/sokoban" target="_blank">
+                <img src="img/duck.svg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Start menu</b></p>
+                    <p>
+                        A start screen
+                    </p>
+                </div>
+            </div>
+            <!-- projects/Sokoban/ -->
+
+            <div class="w3-third w3-container">
+                <a href="projects/cardgame" target="_blank">
+                <img src="projects/cardgame/img/cards/10_of_diamonds.svg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Start of blackjack</b></p>
+                    <p>
+                        projects/cardgame/
+                    </p>
+                </div>
+            </div>
         </div>
-        <p>Mijn portfolio wordt ook aangeboden in het <a href="#">Engels</a> </p>
+
+        <!-- Pagination -->
+        <div class="w3-center w3-padding-32">
+            <div class="w3-bar">
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+                <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+            </div>
+        </div>
+
+        <!-- Images of Me -->
+        <div class="w3-row-padding w3-padding-16" id="about">
+            <div class="w3-col m6">
+                <img src="img/me.jpg" alt="Me" style="width:100%">
+            </div>
+            <div class="w3-col m6">
+                <img src="img/hennekam.jpg" alt="Me" style="width:100%">
+            </div>
+        </div>
+
+        <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+            <h4><b>About Me</b></h4>
+
+            <p>
+                Hi there! My name is Pascal Thong, and I am a highly motivated and dedicated individual with a passion
+                for learning and personal growth. I have a strong background in both education and professional
+                experience, and am always looking for new challenges and opportunities to improve myself and those
+                around me.
+            </p>
+            <p>
+                I studied a Bachelor's degree in Computer Science from the Hague University, and have been working in
+                the tech industry for the past several months. I am skilled in a wide range of programming languages and
+                have extensive experience in software development and project management.
+            </p>
+            <p>
+                In my free time, I enjoy hiking, traveling, and reading. I am also an avid volunteer, and have been
+                involved in several community service projects over the years.
+            </p>
+            <p>I am particularly interested in a freelance job opportunity because it would allow me to gain valuable
+                experience and skills. </p>
+            <p>
+                Overall, I am a well-rounded and accomplished individual who is committed to achieving my goals and
+                making a positive impact in the world.
+            </p>
+            <h5><b>Likes</b></h5>
+            <p>
+                <span class="w3-tag w3-black w3-margin-bottom">Travel</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">China</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Indonesia</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Paris</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Norway</span>
+
+                <span class="w3-tag w3-black w3-small w3-margin-bottom">Web Development</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">React</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Angular</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">NodeJS</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">ExpressJS</span>
+
+                <span class="w3-tag w3-black w3-small w3-margin-bottom">Web Design</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Photoshop</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Illustrator</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Adobe XD</span>
+                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Powerpoint XD</span>
+            </p>
+
+            <hr>
+
+            <hr>
+        </div>
+
+        <div id="work-of-students" class="w3-container w3-padding-32 w3-dark-grey">
+            <div class="w3-row-padding">
+                <div class="w3-3333">
+                    <h3>Work of students</h3>
+                    <ul class="w3-ul w3-hoverable">
+                        <li class="w3-padding-16">
+                            <img src="https://picsum.photos/seed/picsum/300/300" class="w3-left w3-margin-right"
+                                style="width:50px">
+                            <span class="w3-large">Coming soon</span><br>
+                            <span>We are excited to announce that something new and exciting is on the horizon. </span>
+                        </li>
+                        <li class="w3-padding-16">
+                            <img src="https://picsum.photos/seed/picsum/300/300" class="w3-left w3-margin-right"
+                                style="width:50px">
+                            <span class="w3-large">Coming Soon</span><br>
+                            <span>We can't wait to share what we have been working on with you, and we know that you
+                                will be just as excited as we are when you see what we have in store. So stay tuned and
+                                get ready for something amazing!</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-padding-large w3-grey">
+        <h4 id="contact"><b>Contact Me</b></h4>
+        <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+            <div class="w3-third w3-dark-grey">
+                <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+                <p>p.thong@rocmondriaan.nl</p>
+            </div>
+            <div class="w3-third w3-teal">
+                <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+                <p>The Hague</p>
+            </div>
+            <div class="w3-third w3-dark-grey">
+                <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+                <p>Buy me coffee first</p>
+            </div>
+        </div>
+        <hr class="w3-opacity">
     </div>
-    <footer>
-    </footer>
-    <script src="./js/autocomplete.js"></script>
-    <script src="./js/main.js"></script>
+
+    <!-- Footer -->
+    <div class="w3-container w3-padding-large w3-black w3-center">
+        <h3>Thanks!</h3>
+        <p>Thank you for visiting my portfolio! Please feel free to contact me with any questions or inquiries. I am
+            always looking for new opportunities to learn and grow, and would be happy to discuss potential projects
+            or collaborations.</p>
+
+        Template by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> <br>
+        Text genarated by <a href="https://openai.com/api/" target="_blank">OpenAI: ChatGPT3</a><br>
+        Hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a><br>
+
+        Powered by <a href="https://pthong.nl" title="W3.CSS" target="_blank" class="w3-hover-opacity">P.Thong</a>
+    </div>
+
+    <!-- End page content -->
+</div>
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+
 </body>
+
 </html>
