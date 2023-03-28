@@ -1,0 +1,23 @@
+.wrapper{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px,auto));
+    grid-auto-rows: minmax(100px, auto);
+    gap:10px;
+}
+
+.box{
+    background:#ccc;
+    color:black;
+    font-size: 50pt;
+    transition: all 300ms linear;
+}
+
+.green{
+    background:green;
+    
+}
+
+.warning{
+    border:3px solid red;
+    background: lightcoral;
+}

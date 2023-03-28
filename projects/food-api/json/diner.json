@@ -1,0 +1,38 @@
+{
+  "title": "Diner",
+  "description": "Een lijst van verrukkelijk gerechten.",
+  "startTime": "17:00",
+  "endTime": "20:00",
+  "averageKCal": 1100,
+  "dishes": [
+    {
+      "title": "Garnalen dim sum",
+      "ingredients": ["bisque", "tay soi"],
+      "price": 26.85
+    },
+    {
+      "title": "Kip rendang taco’s",
+      "ingredients": ["spasesam-sinaasappel", "komkommer", "bosui"],
+      "price": 29.69
+    },
+    {
+      "title": "Oesters rockefeller",
+      "ingredients": [
+        "spaspinazie-chili gratin",
+        "rode ui",
+        "Olijf olie",
+        "pepers"
+      ],
+      "price": 24.94
+    },
+    {
+      "title": "Millers tasting box",
+      "ingredients": [
+        "Garnalen dim sum",
+        "Kip rendang taco",
+        "Oesters rockefeller"
+      ],
+      "price": 90.99
+    }
+  ]
+}

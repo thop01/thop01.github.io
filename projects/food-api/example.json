@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Software Developer",
+    "description": "Als software developer ontwikkel je voornamelijk zelfstandig (onderdelen van) software, programma's of websites. Jij zorgt ervoor dat ze goed werken. Het gaat niet alleen om het maken van nieuwe dingen. Je zorgt er ook voor dat bestaande software blijft werken. Je leert in de opleiding ook hoe je goed kunt doorvragen wat de klant (eigenlijk) nodig heeft. Heb je de wensen goed op een rij dan kan het ontwerpen en ontwikkelen gaan beginnen. Is de applicatie klaar? Dan help je, na het uitvoerig testen van de software, ook mee aan de invoering ervan.",
+    "type": "BOL",
+    "location": "Tinwerf (lj2 & lj3)/ Leeghwaterplein (lj1)",
+    "levels": [4]
+  },
+  {
+    "title": "IT Systems and Devices",
+    "description": "Na het afronden van de opleiding IT systems and devices ben je bij een bedrijf d\u00e9 contactpersoon op ICT-gebied. Als beheerder houd je je bezig met het beheer, de beveiliging en het onderhoud van netwerken, computers, printers, tablets en smartphones. Jij zorgt ervoor dat alles goed draait en dat alles binnen het bedrijf up-to-date blijft.",
+    "type": "BOL",
+    "location": "Tinwerf/ Brasserskade",
+    "levels": [3, 4]
+  },
+  {
+    "title": "Medewerker ICT support",
+    "description": "Als Medewerker ICT voer je werkzaamheden uit op basis van mondelinge en schriftelijke opdrachten en werkinstructies. Je werk bestaat uit installeren, repareren en onderhouden van hard- en software. Ook leg je pc-, telefonie- en netwerkbekabeling aan en controleer je de installaties. Je hebt verstand van domotica en kennis van elektronica. Je bent breed inzetbaar.",
+    "location": "Tinwerf",
+    "type": "BOL",
+    "levels": [2]
+  }
+]

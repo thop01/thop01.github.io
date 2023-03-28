@@ -1,0 +1,29 @@
+{
+  "title": "Lunch",
+  "description": "Een lijst van overheerlijk pasta's als lunch.",
+  "startTime": "11:30",
+  "endTime": "14:00",
+  "averageKCal": 400,
+  "dishes": [
+    {
+      "title": "Pasta Aglio Olio",
+      "ingredients": ["spaghetti", "knoflook", "Olijf olie", "pepers"],
+      "price": 6.42
+    },
+    {
+      "title": "Smoke Beef Carbonara",
+      "ingredients": ["spaghetti", "eieren", "Olijf olie", "beef"],
+      "price": 12.34
+    },
+    {
+      "title": "Basil Pasta",
+      "ingredients": ["Penne", "bassilicum", "pitten", "pepers"],
+      "price": 10
+    },
+    {
+      "title": "Choco banana pancakes",
+      "ingredients": ["Pannekoek", "chocolade", "banaan"],
+      "price": 8
+    }
+  ]
+}
