@@ -7,13 +7,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link class="bs-theme" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">  <!-- Bootstrap CSS v5.2.1 -->
+    <link class="bs-theme" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+        crossorigin="anonymous"> <!-- Bootstrap CSS v5.2.1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-<style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="img/logo.png">
+   <style>
         h2 {
             padding: 10px;
             background-image: linear-gradient(90deg,
@@ -41,6 +41,11 @@
             margin-bottom: 1rem;
 
         }
+
+        p,li {
+            line-height: 2rem;
+        }
+
     </style>
 </head>
 
@@ -48,7 +53,10 @@
     <nav class="navbar navbar-expand-md bg-light shadow fixed-top">
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="#home">25604: Full SD ❤ nodeJS</a>
+            <a class="navbar-brand" href="#home">
+                <img src="img/logo.png" style="border-radius: 0 4px 4px 0;" width="25" alt="" srcset="">
+                25604: Full SD ❤ nodeJS
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -66,8 +74,8 @@
                         <a class="nav-link" href="#learning_getting-started">GS</a>
                     </li> -->
 
-                   
-                    <a class="nav-link" href="#"data-bs-toggle="modal" data-bs-target="#theme-changer">
+
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#theme-changer">
                         <i class="bi bi-droplet-fill"></i> Theme switcher
                     </a>
                     <li class="nav-item">
@@ -129,13 +137,13 @@
                                 const topics = document.querySelectorAll("#book h3, #book .lead>.tags");
                                 console.log(topics);
                                 // for (let index = 0; index < topics.length; index += 2) {
-                                    // const topics = topics[index];
-                                    // const subtopics = topcis[index+1];
-                                    // console.log({topics, subtopics});
+                                // const topics = topics[index];
+                                // const subtopics = topcis[index+1];
+                                // console.log({topics, subtopics});
                                 // }
                                 let lesson = 0;
                                 for (let index = 0; index < topics.length; index += 2) {
-                                    const element = {mainTopic: topics[index].textContent, subTopic: topics[index+1].textContent};
+                                    const element = { mainTopic: topics[index].textContent, subTopic: topics[index + 1].textContent };
                                     overviewbody.innerHTML += `
                                     <tr>
                                     <th scope="row">${++lesson}</th>
@@ -148,30 +156,29 @@
                             </script>
                         </tbody>
                     </table>
-
                 </div>
             </div>
             <div class="mt-2 pt-2" id="learning" style="min-height:100vh">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="container-fluid col-md-2">
-                            <div id="book-index" class="sticky-top mt-5 pt-5"  style="overflow-y: scroll; height:100vh;">
+                            <div id="book-index" class="sticky-top mt-5 pt-5" style="overflow-y: scroll; height:100vh;">
                                 <h3 class="mt-2">Index</h3>
-                             <script type="module" defer>
-                                const allH3S = document.querySelectorAll("#book h3");
-                                const indexView = document.querySelector("#book-index");
-                                for(const h3 of allH3S){
-                                    indexView.innerHTML += ` <a href="#${h3.id}" class="nav-link">${h3.textContent}</a><hr>`;
-                                }
-                                for(const item of indexView.querySelectorAll("a")){
-                                    item.addEventListener("mouseover", (event)=>{
-                                        event.target.classList.add("animate__animated",  "animate__headShake", "animate__faster");
-                                    });
-                                    item.addEventListener("mouseout", (event)=>{
-                                        event.target.classList.remove("animate__animated",  "animate__headShake");
-                                    });
-                                }
-                             </script>
+                                <script type="module" defer>
+                                    const allH3S = document.querySelectorAll("#book h3");
+                                    const indexView = document.querySelector("#book-index");
+                                    for (const h3 of allH3S) {
+                                        indexView.innerHTML += ` <a href="#${h3.id}" class="nav-link">${h3.textContent}</a><hr>`;
+                                    }
+                                    for (const item of indexView.querySelectorAll("a")) {
+                                        item.addEventListener("mouseover", (event) => {
+                                            event.target.classList.add("animate__animated", "animate__headShake", "animate__faster");
+                                        });
+                                        item.addEventListener("mouseout", (event) => {
+                                            event.target.classList.remove("animate__animated", "animate__headShake");
+                                        });
+                                    }
+                                </script>
                             </div>
                         </div>
                         <div class="col-md-10">
@@ -180,195 +187,105 @@
                                 <div style="min-height:100vh">
                                     <h3 id="learning_getting-started" class="mt-4">Getting started</h3>
                                     <p class="lead">
-                                        TAGS: <span class="tags">Visual Studio Code, nodejs, npm, read & write lines</span>
+                                        TAGS: <span class="tags">Visual Studio Code, nodejs, npm, read & write
+                                            lines</span>
                                     </p>
-                                    Om te beginnen met programmeren moet je twee programma's installeren. 
-                                    een integrated development enviroment (IDE) en nodeJS een javascript runtime enviroment. <br>
-                                    Als IDE gebruiken wij het programma Visual Studio Code. Wil jij een andere code editor gebruiken?
-                                    Dat mag! houdt wel rekening mee dat wij het examen in Visual Studio Code doen. <br>
-                                    <br>
                                     <p>
-                                        Om je om weg te helpen is hier een praktische video voor het installeren van de programma's,
-                                        maar voor meer diepgang kan je de workshop aanvragen: Getting started with NodeJS.
+                                        Om te beginnen met programmeren moet je twee programma's installeren.
+                                        een integrated development enviroment (IDE) en nodeJS een javascript runtime
+                                        enviroment. <br>
+                                        Als IDE gebruiken wij het programma Visual Studio Code. Wil jij een andere code
+                                        editor gebruiken?
+                                        Dat mag! houdt wel rekening mee dat wij het examen in Visual Studio Code doen. <br>
+
                                     </p>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/R03t8l9SOiY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <p>
+                                        Om je om weg te helpen is hier een praktische video voor het installeren van de
+                                        programma's,
+                                        maar voor meer diepgang kan je de workshop aanvragen: Getting started with
+                                        NodeJS.
+                                    </p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/R03t8l9SOiY"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
                                     <div class="m-4 assignment border-start border-success-subtle border-5 ps-2">
                                         <h4> Opdracht: Installeren van visual studio code</h4>
                                         <ol>
-                                            <li>Installeer Node.js: Ga naar de Node.js-website (https://nodejs.org) en download de juiste versie voor jouw besturingssysteem. Volg de installatie-instructies op het scherm om Node.js op jouw computer te installeren.</li>
-                                            <li>Open Visual Studio Code: Als je Visual Studio Code nog niet hebt geïnstalleerd, ga dan naar de Visual Studio Code-website (https://code.visualstudio.com) en download en installeer het voor jouw besturingssysteem.</li>
-                                            <li>Maak een nieuwe projectmap voor jouw Node.js-project en open deze in Visual Studio Code</li>
-                                            <li>Schrijf een programma dat vraagt naar een username en toon een welkomsbericht met de gebruikersnaam.</li>
+                                            <li>Installeer Node.js: Ga naar de Node.js-website (https://nodejs.org) en
+                                                download de juiste versie voor jouw besturingssysteem. Volg de
+                                                installatie-instructies op het scherm om Node.js op jouw computer te
+                                                installeren.</li>
+                                            <li>Open Visual Studio Code: Als je Visual Studio Code nog niet hebt
+                                                geïnstalleerd, ga dan naar de Visual Studio Code-website
+                                                (https://code.visualstudio.com) en download en installeer het voor jouw
+                                                besturingssysteem.</li>
+                                            <li>Maak een nieuwe projectmap voor jouw Node.js-project en open deze in
+                                                Visual Studio Code</li>
+                                            <li>Schrijf een programma dat vraagt naar een username en toon een
+                                                welkomsbericht met de gebruikersnaam.</li>
                                             <li>Maak 1 screenshot van je programma.</li>
                                         </ol>
                                     </div>
                                 </div>
+
+                                <!-- start of Control flow -->
                                 <div style="min-height:100vh">
-                                    <h3 id="learning_variabelen" class="mt-4">
-                                        Variabelen
-                                        </h3>
-                                        <p class="lead">
-                                            TAGS: <span class="tags">let, const, datatypen, number, string, array, object functions</span>
-                                        </p>
-                                        <img src="img/variable.PNG" alt="" srcset="">
-                                        <p>
-                                            Een javascript <i>variable</i> is een container om data op te slaan. 
-                                        </p>
-                                            <p>
-                                                Declareren van een variabelen
-                                                <br>
-                                                <code class="border-start border-success border-5 ps-2">
-                                                    let username
-                                                </code>
-                                            </p>
-                                            <p>
-                                                Declareren en initialiseren van een variabel dat kan veranderen
-                                                <br>
-                                                <code class="border-start border-success border-5 ps-2">
-                                                    let year = 2040
-                                                </code>
-                                            </p>
-                                            <p>
-                                                Declareren en initialiseren van een variabel dat niet kan veranderen
-                                                <br>
-                                                <code class="border-start border-success border-5 ps-2">
-                                                    const master = "Thong"
-                                                </code>
-                                            </p>
-                                    
-                                            <p>
-                                                Bestaande variabelen vullen met (andere) data.
-                                                <br>
-                                                <div class="border-start border-success border-5 ps-2">
-                                                    <code>
-                                                        username = "Passion" <br>
-                                                        year = 2023    
-                                                    </code>
-                                                </div>
-                                            </p> 
-                                            <p>
-                                                Bestaande variabelen vullen met (andere) data.
-                                                <br>
-                                                <div class="border-start border-success border-5 ps-2">
-                                                    <code>
-                                                        username = "Passion" <br>
-                                                        year = 2023    
-                                                    </code>
-                                                </div>
-                                            </p> 
-
-                                            <p>
-                                                Een object is óók een variabel. Een object kan meerdere variables vasthouden. 
-                                                variabelen binnen een object noemen we properties. 
-                                                <br>
-                                                <div class="border-start border-success border-5 ps-2">
-                                                    <code> 
-                                                        let object = {} // Initialiseert een leeg object. <br><br>
-                                                        let user = {<br>
-                                                            &ensp; firstname: "Pascal",<br>
-                                                            &ensp; lastname: "Thong",<br>
-                                                            &ensp; age: 18 <br>
-                                                        }   
-                                                    </code>
-                                                </div>
-                                            </p>
-                                            <p>
-                                                Een datum kan óók gezien worden als een object in een variabel. We noemen de variabel een object van de type Date.
-                                                <br>
-                                                <div class="border-start border-success border-5 ps-2">
-                                                    <code> 
-                                                        let currentDate = new Date()
-                                                    </code>
-                                                </div>
-                                            </p>
-                                    
-                                            <p>
-                                                Een array is een verzameling van variabelen of objecten. Vaak is dit van dezelfde datatype.
-                                                <br>
-                                                <div class="border-start border-success border-5 ps-2">
-                                                    <code> 
-                                                        let array = [] <br><br>
-                                                        let numbers = [23, 2, 2, 23.2 ,5, 3, 2.35, 24.42] <br><br>
-                                                        let cars = ["BMW", "Opel", "Tesla"] <br><br>
-                                                        let grades = [<br>
-                                                        &ensp;    {<br>
-                                                        &ensp;&ensp;       subject: "LOB",<br>
-                                                        &ensp;&ensp;       grade: 10<br>
-                                                        &ensp;    },<br>
-                                                        &ensp;    {<br>
-                                                        &ensp;&ensp;        subject: "Burgerschap",<br>
-                                                        &ensp;&ensp;   grade: <br>
-                                                        &ensp;     },<br>
-                                                        &ensp;     {<br>
-                                                        &ensp;&ensp;        subject: "Engels",<br>
-                                                        &ensp;&ensp;        grade: 8<br>
-                                                        &ensp;     } <br>
-                                                        ]
-                                                        
-                                                    </code>
-                                                </div>
-                                            </p>
-                                            <p>
-                                                Een functie is een speciale variabel. Deze kan je namelijk óók uitvoeren. 
-                                                Het wordt gebruikt om je code te kunnen hergebruiken en het maakt je code leesbaar.
-                                                <br>
-                                                <div class="border-start border-success border-5 ps-2">
-                                                    <code> 
-                                                        const printAndGetResult = function (message) {  <br>
-                                                            &ensp;     const result = ` <br>
-                                                       &ensp; &ensp;    |------ <br>
-                                                       &ensp; &ensp;    | ${message} <br>
-                                                       &ensp; &ensp;    |------ <br>
-                                                        &ensp;    ` <br>
-                                                        &ensp;    console.log(result); <br>
-                                                        &ensp;    return result; <br>
-                                                        }
-                                                        
-                                                    </code>
-                                                </div>
-                                            </p> 
-                                            <p>
-                                                Een JSON-object is een stuk tekst (string). Het is een leesbaar formaat om data op de computer op te slaan
-                                                en te verzenden via het Internet. Normaal gesproken type je zelf géén JSON. Hiervoor kan je verschillende functies gebruiken.
-                                                <br>
-                                                <div class="border-start border-success border-5 ps-2">
-                                                    <code> 
-                                                        let objectToSend = " 'firstname': 'Piet', 'age':12' "
-                                                    </code>
-                                                </div>
-                                            </p>
-                                 
-
-                                        <h4 class="mt-4">Primitive Datatypes</h4>
-                                            <p>Number, String & Boolean zijn primitieve data types</p>
-                                        <h5>Primitive methods</h5>
-
-                                        <h4>Complex Datatypes</h4>
-                                        <p></p>
-                                        <h5>Array methods</h5>
-                                        <h5>Object methods</h5>
-                                        
-                                </div>
-                                <div style="min-height:100vh">
-                                    <h3 id="learning_control-flow" class="mt-4">
-                                        Control flow
+                                    <h3 id="learning_oop" class="mt-4">
+                                        Object-Oriented Programming (OOP)
                                     </h3>
                                     <p class="lead">
-                                        TAGS: <span class="tags">if else, while, for, for in, for of</span>
+                                        TAGS: <span class="tags"> OOP Object, methods, properties </span>
                                     </p>
+                                    <p>In de loop der tijd komen en gaan de technologieën of tools die we gebruiken in
+                                        programmeren, maar Object-Oriented Programming, afgekort als OOP, blijft
+                                        stabiel gedurende het afgelopen decennium. Dit komt doordat het geen
+                                        programmeertaal of tool is, maar een stijl van programmeren.
+                                        OOP is een programmeerstijl die zich voornamelijk richt op objecten in plaats
+                                        van op functies en variabelen.
+                                        OOP is een van de meest populaire programmeerstijl die wordt gebruikt in code.
+                                        Afhankelijk van de taal die je gebruikt, kan de implementatie verschillen, maar
+                                        over het algemeen zijn de concepten vrij algemeen voor alle programmeertalen.
+                                    </p>
+                                    <h4>Een klasse</h4>
+                                    <p>
+                                        Een klasse is een sjabloon voor het creëren van meerdere objecten.
+                                        Klasses worden vaak gebruikt om grote groepen met
+                                        vergelijkbare kenmerken te beschrijven, zoals Auto of product. Deze klassen
+                                        beschrijven welke eigenschappen, zoals kleur, model, type zal hebben.
+                                        Maar niet de waarde van die eigenschappen voor een specifiek object.
+                                    </p>
+                                    <h4> Een Object</h4>
+                                    <p>
+                                        Een object wordt binnen OOP gecreëerd vanuit een specifieke klasse. We noemen deze
+                                        objecten de instanties van een klasse en deze worden gemaakt met specifieke
+                                        gegevens. We kunnen deze objecten gebruiken om objecten uit de echte wereld voor
+                                        te stellen. We kunnen meerdere objecten maken vanuit een bepaalde klasse.
+                                    </p>
+                                    <h4>Teacher todo</h4>
+                                    <ul>
+                                        <li> <a href="https://github.com/KanchanaCJagodage/Node-OOP/tree/master/class_files" target="_blank" rel="noopener noreferrer">his git</a></li>
+                                        <li> <a href="https://www.linkedin.com/pulse/nodejs-object-oriented-programming-concepts-kanchana-jagodage/" target="_blank" rel="noopener noreferrer">nodejs-object-oriented-programming-concepts</a></li>
+                                    </ul>
                                 </div>
+
+
+                                <!-- Start of Internal modules -->
                                 <div style="min-height:100vh">
                                     <h3 id="learning_internal-module" class="mt-4">
-                                    Internal Modules
+                                        Internal Modules
                                     </h3>
                                     <p class="lead">
-                                        TAGS: <span class="tags">EmcaScriptModule, Console, OS, file system, HTTP, Documentation</span>
+                                        TAGS: <span class="tags">EmcaScriptModule, Console, OS, file system, HTTP,
+                                            Documentation</span>
                                     </p>
-                                    <p>Modules zijn subsystemen dat je kan gebruiken. 
-                                        </p>
+                                    <p>
+                                        Modules zijn subsystemen dat je kan gebruiken.
+                                    </p>
                                     <div class="row">
                                         <div class="col">
-                                            <img src="img/file-system-and-operting-system (1).webp" class="img-fluid" alt="">
+                                            <img src="img/file-system-and-operting-system (1).webp" class="img-fluid"
+                                                alt="">
 
                                         </div>
                                         <div class="col">
@@ -376,40 +293,64 @@
 
                                         </div>
                                     </div>
-                                    <p>  Er zijn veel interne modules beschikbaar in Node.js. Hieronder vind je een paar voorbeelden van populaire en nuttige interne modules:
+                                    <p> Er zijn veel interne modules beschikbaar in Node.js. Hieronder vind je een paar
+                                        voorbeelden van populaire en nuttige interne modules:
                                     </p>
                                     <ol>
-                                        <li>fs - Dit is de File System module van Node.js. Het biedt methoden om te werken met het bestandssysteem van de computer, zoals het lezen en schrijven van bestanden.</li>
-                                        <li>path - Dit is een hulpprogramma-module die gebruikt wordt voor het manipuleren van bestandspaden. Het biedt methoden om paden samen te voegen, te normaliseren en om te zetten tussen verschillende notaties.</li>
+                                        <li>fs - Dit is de File System module van Node.js. Het biedt methoden om te
+                                            werken met het bestandssysteem van de computer, zoals het lezen en schrijven
+                                            van bestanden.</li>
+                                        <li>path - Dit is een hulpprogramma-module die gebruikt wordt voor het
+                                            manipuleren van bestandspaden. Het biedt methoden om paden samen te voegen,
+                                            te normaliseren en om te zetten tussen verschillende notaties.</li>
                                         <li>
-                                            os - De OS-module biedt toegang tot informatie over het besturingssysteem waarop Node.js wordt uitgevoerd, zoals de hoeveelheid beschikbare geheugen, de processorarchitectuur en het besturingssysteemtype.
+                                            os - De OS-module biedt toegang tot informatie over het besturingssysteem
+                                            waarop Node.js wordt uitgevoerd, zoals de hoeveelheid beschikbare geheugen,
+                                            de processorarchitectuur en het besturingssysteemtype.
                                         </li>
-                                        <li>http - De HTTP-module is bedoeld voor het maken van HTTP-servers en clients. Het biedt de mogelijkheid om HTTP-verzoeken te verzenden en te ontvangen, en om HTTP-servers te maken die kunnen reageren op verzoeken van clients.</li>
-                                        <li>util - Dit is een hulpprogramma-module die een reeks handige hulpprogramma's biedt, zoals het omzetten van objecten naar JSON en vice versa, het formatteren van strings en het erven van klassen.</li>
+                                        <li>http - De HTTP-module is bedoeld voor het maken van HTTP-servers en clients.
+                                            Het biedt de mogelijkheid om HTTP-verzoeken te verzenden en te ontvangen, en
+                                            om HTTP-servers te maken die kunnen reageren op verzoeken van clients.</li>
+                                        <li>util - Dit is een hulpprogramma-module die een reeks handige hulpprogramma's
+                                            biedt, zoals het omzetten van objecten naar JSON en vice versa, het
+                                            formatteren van strings en het erven van klassen.</li>
                                     </ol>
                                     <p>
-                                        Dit zijn slechts enkele voorbeelden van de interessante interne modules van Node.js. Node.js biedt veel meer modules die kunnen worden gebruikt om verschillende taken te automatiseren en de ontwikkeling van applicaties te vereenvoudigen.
-                                        De volledige lijst aan interne modules kan je vinden in de <a target="_blank" href="https://nodejs.org/dist/latest-v19.x/docs/api/documentation.html">documentatie van NodeJS: </a>
+                                        Dit zijn slechts enkele voorbeelden van de interessante interne modules van
+                                        Node.js. Node.js biedt veel meer modules die kunnen worden gebruikt om
+                                        verschillende taken te automatiseren en de ontwikkeling van applicaties te
+                                        vereenvoudigen.
+                                        De volledige lijst aan interne modules kan je vinden in de <a target="_blank"
+                                            href="https://nodejs.org/dist/latest-v19.x/docs/api/documentation.html">documentatie
+                                            van NodeJS: </a>
                                     </p>
                                     <p>
-                                        Er zijn twee manieren om modules in jou script in te laden. met require of met import. Hiervoor moeten we eerst een keuze maken tussen CommonJS en ModuleJS.
+                                        Er zijn twee manieren om modules in jou script in te laden. met require of met
+                                        import. Hiervoor moeten we eerst een keuze maken tussen CommonJS en ModuleJS.
                                     </p>
                                     <h4>
                                         Het verschil tussen CommonJS en ModuleJS
                                     </h4>
                                     <p>
-                                        CommonJS en ModuleJS zijn beide systemen voor het structureren van JavaScript-code in modules, maar er zijn enkele belangrijke verschillen tussen de twee:
+                                        CommonJS en ModuleJS zijn beide systemen voor het structureren van
+                                        JavaScript-code in modules, maar er zijn enkele belangrijke verschillen tussen
+                                        de twee:
                                     </p>
                                     <p>
-                                        CommonJS gebruikt een 'require' functie om stukjes code op te halen en een 'module.exports' object om stukjes code te delen. Het laadt stukjes code op het moment dat ze nodig zijn.
+                                        CommonJS gebruikt een 'require' functie om stukjes code op te halen en een
+                                        'module.exports' object om stukjes code te delen. Het laadt stukjes code op het
+                                        moment dat ze nodig zijn.
                                     </p>
                                     <p>
-                                        ModuleJS daarentegen gebruikt 'import' en 'export' om stukjes code op te halen en te delen. Het laadt stukjes code voorafgaand aan het uitvoeren van de code.
+                                        ModuleJS daarentegen gebruikt 'import' en 'export' om stukjes code op te halen
+                                        en te delen. Het laadt stukjes code voorafgaand aan het uitvoeren van de code.
                                     </p>
                                     <p>
-                                        In het algemeen wordt ModuleJS gezien als de modernere en standaard manier om stukjes code te delen in JavaScript, terwijl CommonJS voornamelijk gebruikt wordt op oudere projecten of op servers zoals Node.js.
+                                        In het algemeen wordt ModuleJS gezien als de modernere en standaard manier om
+                                        stukjes code te delen in JavaScript, terwijl CommonJS voornamelijk gebruikt
+                                        wordt op oudere projecten of op servers zoals Node.js.
                                     </p>
-                                    
+
                                     <h4>FileSystem - non-blocking vs blocking</h4>
                                     <code>
                                         // Blocking <br>
@@ -426,35 +367,47 @@ fs.readFile('/file.md', (err, data) => { <br>
 }); <br>
 moreWork(); // will run before console.log <br>
                                     </code>
-                                    
+
                                 </div>
                                 <div style="min-height:100vh">
                                     <h3 id="learning_public_folder" class="mt-4">
-                                    Intermezzo: Landing page
+                                        Intermezzo: Landing page
                                     </h3>
                                     <p class="lead">
                                         TAGS: <span class="tags">Public folder, templates</span>
                                     </p>
-                                    <p>Een landing page voor een applicatie is een webpagina die is ontworpen om bezoekers aan te trekken en hen te overtuigen om de mobiele of desktop applicatie te downloaden en te gebruiken. Het doel van deze pagina is om potentiële gebruikers te informeren over de functionaliteit, kenmerken en voordelen van de applicatie, evenals om hen te overtuigen om de applicatie te downloaden en te installeren.</p>
-                                    <p>Een goede landing page voor een applicatie moet duidelijk en beknopt zijn, met een aantrekkelijke titel, beschrijving van de belangrijkste kenmerken van de applicatie, screenshots of video's van de applicatie in actie, en sociale bewijsvoering in de vorm van gebruikersrecensies en beoordelingen.</p>
+                                    <p>Een landing page voor een applicatie is een webpagina die is ontworpen om
+                                        bezoekers aan te trekken en hen te overtuigen om de mobiele of desktop
+                                        applicatie te downloaden en te gebruiken. Het doel van deze pagina is om
+                                        potentiële gebruikers te informeren over de functionaliteit, kenmerken en
+                                        voordelen van de applicatie, evenals om hen te overtuigen om de applicatie te
+                                        downloaden en te installeren.</p>
+                                    <p>Een goede landing page voor een applicatie moet duidelijk en beknopt zijn, met
+                                        een aantrekkelijke titel, beschrijving van de belangrijkste kenmerken van de
+                                        applicatie, screenshots of video's van de applicatie in actie, en sociale
+                                        bewijsvoering in de vorm van gebruikersrecensies en beoordelingen.</p>
 
                                     <div class="row">
                                         <div class="col">
-                                            <img class="img-fluid shadow" src="img/templates/Bikin-bootstrap-website-template.webp" alt="">
+                                            <img class="img-fluid shadow"
+                                                src="img/templates/Bikin-bootstrap-website-template.webp" alt="">
                                         </div>
                                         <div class="col">
-                                            <img class="img-fluid shadow" src="img/templates/eNno-bootstrap-website-template.webp" alt="">
+                                            <img class="img-fluid shadow"
+                                                src="img/templates/eNno-bootstrap-website-template.webp" alt="">
                                         </div>
-                                
+
                                         <div class="col">
-                                            <img class="img-fluid shadow" src="img/templates/OnePage-bootstrap-website-template.webp" alt="">
+                                            <img class="img-fluid shadow"
+                                                src="img/templates/OnePage-bootstrap-website-template.webp" alt="">
                                         </div>
                                         <div class="col">
-                                            <img class="img-fluid shadow" src="img/templates/Techie-bootstrap-website-template.webp" alt="">
+                                            <img class="img-fluid shadow"
+                                                src="img/templates/Techie-bootstrap-website-template.webp" alt="">
                                         </div>
-                                   
-                                
-                                
+
+
+
                                     </div>
 
                                     <div class="m-4 assignment border-start border-success-subtle border-5 ps-2">
@@ -464,24 +417,30 @@ moreWork(); // will run before console.log <br>
                                                 Maak in de root van het project een nieuwe map aan met de naam "public".
                                             </li>
                                             <li>
-                                                Ga op zoek naar een (gratis) landing page template en download de source code.
-                                                Er zijn verschillende templates beschikbaar die je kunt gebruiken, 
+                                                Ga op zoek naar een (gratis) landing page template en download de source
+                                                code.
+                                                Er zijn verschillende templates beschikbaar die je kunt gebruiken,
                                                 kies er één die het beste bij jouw app idee past.
                                             </li>
                                             <li>
-                                                Pak het gedownloade template uit en kopieer de inhoud naar de "public" map van jouw project.
+                                                Pak het gedownloade template uit en kopieer de inhoud naar de "public"
+                                                map van jouw project.
                                             </li>
                                             <li>
-                                                Open het index.html-bestand van het template in jouw teksteditor. 
-                                                Pas de inhoud aan met jouw eigen app idee. Je kunt bijvoorbeeld de kopjes, 
-                                                paragrafen en afbeeldingen vervangen door inhoud die beter bij jouw app past.
+                                                Open het index.html-bestand van het template in jouw teksteditor.
+                                                Pas de inhoud aan met jouw eigen app idee. Je kunt bijvoorbeeld de
+                                                kopjes,
+                                                paragrafen en afbeeldingen vervangen door inhoud die beter bij jouw app
+                                                past.
                                             </li>
-                                            <li>Als je wijzigingen hebt aangebracht in de HTML van het template, 
-                                                open dan ook het bijbehorende CSS-bestand en voeg eventueel jouw eigen stijlen toe.
+                                            <li>Als je wijzigingen hebt aangebracht in de HTML van het template,
+                                                open dan ook het bijbehorende CSS-bestand en voeg eventueel jouw eigen
+                                                stijlen toe.
                                             </li>
                                             <li>
                                                 Open het index.html-bestand in jouw browser.
-                                                Je zou nu jouw aangepaste landing page met jouw eigen app idee moeten zien.
+                                                Je zou nu jouw aangepaste landing page met jouw eigen app idee moeten
+                                                zien.
                                             </li>
                                             <li>
                                                 Maak een screenshot van jouw landing page.
@@ -511,35 +470,51 @@ moreWork(); // will run before console.log <br>
                                         <div class="col">
                                             <img class="img-fluid shadow" src="img/moment.png" alt="">
                                         </div>
-                                       
+
                                     </div>
-                                    <p>Er zijn duizenden externe modules beschikbaar voor Node.js in de vorm van pakketten die kunnen worden geïnstalleerd via de npm (Node Package Manager). 
-                                        Door gebruik te maken van deze modules, kunnen ontwikkelaars tijd besparen bij het bouwen van applicaties en kunnen ze profiteren van de functionaliteit en het gemak dat deze modules bieden.
-                                        Hieronder vind je enkele voorbeelden van populaire en nuttige externe modules:</p>
+                                    <p>Er zijn duizenden externe modules beschikbaar voor Node.js in de vorm van
+                                        pakketten die kunnen worden geïnstalleerd via de npm (Node Package Manager).
+                                        Door gebruik te maken van deze modules, kunnen ontwikkelaars tijd besparen bij
+                                        het bouwen van applicaties en kunnen ze profiteren van de functionaliteit en het
+                                        gemak dat deze modules bieden.
+                                        Hieronder vind je enkele voorbeelden van populaire en nuttige externe modules:
+                                    </p>
                                     <ol>
                                         <li>
-                                            Express - Dit is een van de populairste frameworks voor het bouwen van webapplicaties in Node.js. Het biedt een eenvoudige manier om HTTP-servers te maken, routes te definiëren, middleware te gebruiken enz.
+                                            Express - Dit is een van de populairste frameworks voor het bouwen van
+                                            webapplicaties in Node.js. Het biedt een eenvoudige manier om HTTP-servers
+                                            te maken, routes te definiëren, middleware te gebruiken enz.
                                         </li>
                                         <li>
-                                            Socket.io - Deze module biedt een eenvoudige manier om real-time communicatie te implementeren tussen de server en de client, bijvoorbeeld voor het bouwen van chatapplicaties.
+                                            Socket.io - Deze module biedt een eenvoudige manier om real-time
+                                            communicatie te implementeren tussen de server en de client, bijvoorbeeld
+                                            voor het bouwen van chatapplicaties.
                                         </li>
                                         <li>
-                                            Moment.js - Dit is een handige module voor het werken met datums en tijden in JavaScript. Het biedt functies om datums te formatteren, te manipuleren en te vergelijken.
+                                            Moment.js - Dit is een handige module voor het werken met datums en tijden
+                                            in JavaScript. Het biedt functies om datums te formatteren, te manipuleren
+                                            en te vergelijken.
                                         </li>
                                         <li>
-                                            Mongoose - Dit is een Object Document Mapper (ODM) voor MongoDB-databases, die het gemakkelijker maakt om met de database te werken en gegevens te valideren.
+                                            Mongoose - Dit is een Object Document Mapper (ODM) voor MongoDB-databases,
+                                            die het gemakkelijker maakt om met de database te werken en gegevens te
+                                            valideren.
                                         </li>
                                     </ol>
                                     <p>
-                                        Dit zijn slechts enkele voorbeelden van de interessante externe modules. Node Package Manager biedt veel meer modules die kunnen worden gebruikt om verschillende taken te automatiseren en de ontwikkeling van applicaties te vereenvoudigen. 
-                                        De volledige lijst aan interne modules kan je vinden op de website van <a href="https://www.npmjs.com/" target="_blank">Node Package Manager</a> 
+                                        Dit zijn slechts enkele voorbeelden van de interessante externe modules. Node
+                                        Package Manager biedt veel meer modules die kunnen worden gebruikt om
+                                        verschillende taken te automatiseren en de ontwikkeling van applicaties te
+                                        vereenvoudigen.
+                                        De volledige lijst aan interne modules kan je vinden op de website van <a
+                                            href="https://www.npmjs.com/" target="_blank">Node Package Manager</a>
                                     </p>
 
                                 </div>
-                               
+
                                 <div style="min-height:100vh">
                                     <h3 id="learning_mocha" class="mt-4">
-                                        Mocha  or jestjs.io testing
+                                        Mocha or jestjs.io testing
                                     </h3>
                                     <p class="lead">
                                         TAGS: <span class="tags">Testen, mocha framework, integratietesten</span>
@@ -553,6 +528,9 @@ moreWork(); // will run before console.log <br>
                                         TAGS: <span class="tags">authenticatie, verivication</span>
                                     </p>
                                 </div>
+
+
+                                <!-- Start dataopslag -->
                                 <div style="min-height:100vh">
                                     <h3 id="learning_database" class="mt-4">
                                         Dataopslag
@@ -561,17 +539,28 @@ moreWork(); // will run before console.log <br>
                                         TAGS: <span class="tags">Databases, mongodb, postgreSQL</span>
                                     </p>
                                     <p>
-                                        Er zijn verschillende databases die compatibel zijn met Node.js, elk met zijn eigen voordelen en toepassingsgebieden. Enkele van de meest populaire databases voor Node.js zijn:
+                                        Er zijn verschillende databases die compatibel zijn met Node.js, elk met zijn
+                                        eigen voordelen en toepassingsgebieden. Enkele van de meest populaire databases
+                                        voor Node.js zijn:
                                     </p>
                                     <ul>
                                         <li>
-                                            MongoDB: Dit is een documentgeoriënteerde database die gebruikmaakt van JSON-achtige documenten voor gegevensopslag. Het is een uitstekende keuze voor Node.js-toepassingen vanwege de flexibiliteit, schaalbaarheid en snelheid.
+                                            MongoDB: Dit is een documentgeoriënteerde database die gebruikmaakt van
+                                            JSON-achtige documenten voor gegevensopslag. Het is een uitstekende keuze
+                                            voor Node.js-toepassingen vanwege de flexibiliteit, schaalbaarheid en
+                                            snelheid.
                                         </li>
                                         <li>
-                                            MySQL: MySQL is een relationele database die gebruikmaakt van SQL (Structured Query Language) voor het opvragen en manipuleren van gegevens. Het is een bewezen oplossing voor zakelijke toepassingen en is geschikt voor zowel kleine als grote projecten.
+                                            MySQL: MySQL is een relationele database die gebruikmaakt van SQL
+                                            (Structured Query Language) voor het opvragen en manipuleren van gegevens.
+                                            Het is een bewezen oplossing voor zakelijke toepassingen en is geschikt voor
+                                            zowel kleine als grote projecten.
                                         </li>
                                         <li>
-                                            PostgreSQL: PostgreSQL is een geavanceerde open source relationele database die bekend staat om zijn robuustheid, stabiliteit en schaalbaarheid. Het is een uitstekende keuze voor toepassingen met veel gegevens of voor bedrijfskritieke toepassingen.
+                                            PostgreSQL: PostgreSQL is een geavanceerde open source relationele database
+                                            die bekend staat om zijn robuustheid, stabiliteit en schaalbaarheid. Het is
+                                            een uitstekende keuze voor toepassingen met veel gegevens of voor
+                                            bedrijfskritieke toepassingen.
                                         </li>
                                     </ul>
                                 </div>
@@ -580,10 +569,11 @@ moreWork(); // will run before console.log <br>
                                         Deployment
                                     </h3>
                                     <p class="lead">
-                                        TAGS: <span class="tags">Heroku, AWS, continous integration, continuous deployment</span>
+                                        TAGS: <span class="tags">Heroku, AWS, continous integration, continuous
+                                            deployment</span>
                                     </p>
                                 </div>
-                                
+
                                 <div style="min-height:100vh">
                                     <h3 id="learning_next" class="mt-4">
                                         What's next?
@@ -592,6 +582,172 @@ moreWork(); // will run before console.log <br>
                                         TAGS: <span class="tags">QUiZ APP?, more?</span>
                                     </p>
                                 </div>
+
+                                <!-- Start of variabelen -->
+                                <div style="min-height:100vh">
+                                    <h3 id="learning_variabelen" class="mt-4">
+                                        Variabelen
+                                    </h3>
+                                    <p class="lead">
+                                        TAGS: <span class="tags">let, const, datatypen, number, string, array, object
+                                            functions</span>
+                                    </p>
+                                    <img src="img/variable.PNG" alt="" srcset="">
+                                    <p>
+                                        Een javascript <i>variable</i> is een container om data op te slaan.
+                                    </p>
+                                    <p>
+                                        Declareren van een variabelen
+                                        <br>
+                                        <code class="border-start border-success border-5 ps-2">
+                                                    let username
+                                                </code>
+                                    </p>
+                                    <p>
+                                        Declareren en initialiseren van een variabel dat kan veranderen
+                                        <br>
+                                        <code class="border-start border-success border-5 ps-2">
+                                                    let year = 2040
+                                                </code>
+                                    </p>
+                                    <p>
+                                        Declareren en initialiseren van een variabel dat niet kan veranderen
+                                        <br>
+                                        <code class="border-start border-success border-5 ps-2">
+                                                    const master = "Thong"
+                                                </code>
+                                    </p>
+
+                                    <p>
+                                        Bestaande variabelen vullen met (andere) data.
+                                        <br>
+                                    <div class="border-start border-success border-5 ps-2">
+                                        <code>
+                                                        username = "Passion" <br>
+                                                        year = 2023    
+                                                    </code>
+                                    </div>
+                                    </p>
+                                    <p>
+                                        Bestaande variabelen vullen met (andere) data.
+                                        <br>
+                                    <div class="border-start border-success border-5 ps-2">
+                                        <code>
+                                                        username = "Passion" <br>
+                                                        year = 2023    
+                                                    </code>
+                                    </div>
+                                    </p>
+
+                                    <p>
+                                        Een object is óók een variabel. Een object kan meerdere variables vasthouden.
+                                        variabelen binnen een object noemen we properties.
+                                        <br>
+                                    <div class="border-start border-success border-5 ps-2">
+                                        <code>
+                                                        let object = {} // Initialiseert een leeg object. <br><br>
+                                                        let user = {<br>
+                                                            &ensp; firstname: "Pascal",<br>
+                                                            &ensp; lastname: "Thong",<br>
+                                                            &ensp; age: 18 <br>
+                                                        }   
+                                                    </code>
+                                    </div>
+                                    </p>
+                                    <p>
+                                        Een datum kan óók gezien worden als een object in een variabel. We noemen de
+                                        variabel een object van de type Date.
+                                        <br>
+                                    <div class="border-start border-success border-5 ps-2">
+                                        <code>
+                                                        let currentDate = new Date()
+                                                    </code>
+                                    </div>
+                                    </p>
+
+                                    <p>
+                                        Een array is een verzameling van variabelen of objecten. Vaak is dit van
+                                        dezelfde datatype.
+                                        <br>
+                                    <div class="border-start border-success border-5 ps-2">
+                                        <code>
+                                                        let array = [] <br><br>
+                                                        let numbers = [23, 2, 2, 23.2 ,5, 3, 2.35, 24.42] <br><br>
+                                                        let cars = ["BMW", "Opel", "Tesla"] <br><br>
+                                                        let grades = [<br>
+                                                        &ensp;    {<br>
+                                                        &ensp;&ensp;       subject: "LOB",<br>
+                                                        &ensp;&ensp;       grade: 10<br>
+                                                        &ensp;    },<br>
+                                                        &ensp;    {<br>
+                                                        &ensp;&ensp;        subject: "Burgerschap",<br>
+                                                        &ensp;&ensp;   grade: <br>
+                                                        &ensp;     },<br>
+                                                        &ensp;     {<br>
+                                                        &ensp;&ensp;        subject: "Engels",<br>
+                                                        &ensp;&ensp;        grade: 8<br>
+                                                        &ensp;     } <br>
+                                                        ]
+                                                        
+                                                    </code>
+                                    </div>
+                                    </p>
+                                    <p>
+                                        Een functie is een speciale variabel. Deze kan je namelijk óók uitvoeren.
+                                        Het wordt gebruikt om je code te kunnen hergebruiken en het maakt je code
+                                        leesbaar.
+                                        <br>
+                                    <div class="border-start border-success border-5 ps-2">
+                                        <code>
+                                                        const printAndGetResult = function (message) {  <br>
+                                                            &ensp;     const result = ` <br>
+                                                       &ensp; &ensp;    |------ <br>
+                                                       &ensp; &ensp;    | ${message} <br>
+                                                       &ensp; &ensp;    |------ <br>
+                                                        &ensp;    ` <br>
+                                                        &ensp;    console.log(result); <br>
+                                                        &ensp;    return result; <br>
+                                                        }
+                                                        
+                                                    </code>
+                                    </div>
+                                    </p>
+                                    <p>
+                                        Een JSON-object is een stuk tekst (string). Het is een leesbaar formaat om data
+                                        op de computer op te slaan
+                                        en te verzenden via het Internet. Normaal gesproken type je zelf géén JSON.
+                                        Hiervoor kan je verschillende functies gebruiken.
+                                        <br>
+                                    <div class="border-start border-success border-5 ps-2">
+                                        <code>
+                                                        let objectToSend = " 'firstname': 'Piet', 'age':12' "
+                                                    </code>
+                                    </div>
+                                    </p>
+
+
+                                    <h4 class="mt-4">Primitive Datatypes</h4>
+                                    <p>Number, String & Boolean zijn primitieve data types</p>
+                                    <h5>Primitive methods</h5>
+
+                                    <h4>Complex Datatypes</h4>
+                                    <p></p>
+                                    <h5>Array methods</h5>
+                                    <h5>Object methods</h5>
+
+                                </div>
+
+                                <!-- start of Control flow -->
+                                <div style="min-height:100vh">
+                                    <h3 id="learning_control-flow" class="mt-4">
+                                        Control flow
+                                    </h3>
+                                    <p class="lead">
+                                        TAGS: <span class="tags">if else, while, for, for in, for of</span>
+                                    </p>
+                                </div>
+
+
                                 <div style="min-height:100vh">
                                     <h3 id="learning_empty" class="mt-4">
                                         new page
@@ -613,10 +769,11 @@ moreWork(); // will run before console.log <br>
                         maandag 27 maart 2023
                     </h3>
                     <p>
-                        d. heeft filesystem uitgezocht. en komt terug met blocking en non-blocking filesystem programming.
+                        d. heeft filesystem uitgezocht. en komt terug met blocking en non-blocking filesystem
+                        programming.
                         Gevraagd of d. een echte database wil gebruiken. en onderzoeken welke beter voor hem is.
-                        een document based database of een relationeel database. 
-                    
+                        een document based database of een relationeel database.
+
                     </p>
                     <h3>Vrijdag 24 maart 2023</h3>
                     <p>
@@ -631,7 +788,7 @@ moreWork(); // will run before console.log <br>
                 <div class="container">
                     <h2>my playground</h2>
 
-                    
+
 
                     <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
                         aria-valuemin="0" aria-valuemax="100">
@@ -725,74 +882,74 @@ moreWork(); // will run before console.log <br>
                         <p>Here is some information</p>
                     </div>
                     <br>
-                    
+
 
 
                 </div>
             </div>
         </div>
 
- <!-- change theme modal -->
- <div class="modal fade" id="theme-changer" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title"> Theme changer</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>All the theme are ripped from bootswatch.com/</p>
-                <select id="theme-selector" class="form-select" aria-label="theme">
-                    <option value="null" selected>Select a theme</option>
-                    <option value="cosmo">cosmo</option>
-                    <option value="curelean">curelean</option>
-                    <option value="cyborg">cyborg</option>
-                    <option value="darkly">darkly</option>
-                    <option value="flatly">flatly</option>
-                    <option value="journal">journal</option>
-                    <option value="litera">litera</option>
-                    <option value="lumen">lumen</option>
-                    <option value="lux">Lux</option>
-                    <option value="materia">materia</option>
-                    <option value="minty">minty</option>
-                    <option value="morph">morph</option>
-                    <option value="pulse">pulse</option>
-                    <option value="quartz">quartz</option>
-                    <option value="sandstorm">sandstorm</option>
-                    <option value="simplex">simplex</option>
-                    <option value="sketchy">sketchy</option>
-                </select>
+        <!-- change theme modal -->
+        <div class="modal fade" id="theme-changer" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"> Theme changer</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>All the theme are ripped from bootswatch.com/</p>
+                        <select id="theme-selector" class="form-select" aria-label="theme">
+                            <option value="null" selected>Select a theme</option>
+                            <option value="cosmo">cosmo</option>
+                            <option value="curelean">curelean</option>
+                            <option value="cyborg">cyborg</option>
+                            <option value="darkly">darkly</option>
+                            <option value="flatly">flatly</option>
+                            <option value="journal">journal</option>
+                            <option value="litera">litera</option>
+                            <option value="lumen">lumen</option>
+                            <option value="lux">Lux</option>
+                            <option value="materia">materia</option>
+                            <option value="minty">minty</option>
+                            <option value="morph">morph</option>
+                            <option value="pulse">pulse</option>
+                            <option value="quartz">quartz</option>
+                            <option value="sandstorm">sandstorm</option>
+                            <option value="simplex">simplex</option>
+                            <option value="sketchy">sketchy</option>
+                        </select>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<script>
+        <script>
 
-    const css = document.querySelector("link");
-    const integrity = css.integrity;
+            const css = document.querySelector("link");
+            const integrity = css.integrity;
 
-    const themeSelector = document.querySelector("#theme-selector");
-    themeSelector.addEventListener("change", function (e) {
-        const chosen = e.target.value;
+            const themeSelector = document.querySelector("#theme-selector");
+            themeSelector.addEventListener("change", function (e) {
+                const chosen = e.target.value;
 
-        if (chosen != "null") {
+                if (chosen != "null") {
 
-            css.integrity = "";
-            css.href = `./css//themes/${chosen}.css`;
+                    css.integrity = "";
+                    css.href = `./css//themes/${chosen}.css`;
 
-        }
-    });
+                }
+            });
 
-</script>
+        </script>
 
-<!-- charts -->
-<script>
-    const ctx = document.querySelector('.my-first-chart');
+        <!-- charts -->
+        <script>
+            const ctx = document.querySelector('.my-first-chart');
             new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -811,10 +968,12 @@ moreWork(); // will run before console.log <br>
                     }
                 }
             });
-            </script>
-            <!-- Bootstrap JavaScript Libraries -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>
