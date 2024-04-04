@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registratie Pagina</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Aanvullende aangepaste stijlen kunnen hier worden toegevoegd */
+    .register-container {
+      max-width: 400px;
+      margin: auto;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container register-container">
+    <h2 class="text-center">Registratie</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Gebruikersnaam</label>
+        <input type="text" class="form-control" id="username" placeholder="Voer gebruikersnaam in">
+      </div>
+      <div class="form-group">
+        <label for="email">E-mailadres</label>
+        <input type="email" class="form-control" id="email" placeholder="Voer e-mailadres in">
+      </div>
+      <div class="form-group">
+        <label for="password">Wachtwoord</label>
+        <input type="password" class="form-control" id="password" placeholder="Voer wachtwoord in">
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Bevestig Wachtwoord</label>
+        <input type="password" class="form-control" id="confirm-password" placeholder="Bevestig wachtwoord">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Registreren</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS en optionele jQuery (nodig voor bepaalde Bootstrap-functies) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
