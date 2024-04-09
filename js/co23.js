@@ -1,6 +1,6 @@
 
 const githubRepos = [
-    // "https://sbechoe.github.io",
+    "https://sbechoe.github.io",
     "https://thop01.github.io",
     "https://reshadshirzai.github.io",
     "https://duncanvandien.github.io",
@@ -13,10 +13,7 @@ const githubRepos = [
     "https://arsenio-w.github.io/",
     "https://t-hussain01.github.io",
     "https://a-sealiti.github.io"
-    
-
-]
-
+];
 
 function showGlinks(){
     const cardContainer = document.querySelector(".page-container");
@@ -26,19 +23,36 @@ function showGlinks(){
         let username = glink.slice(8);
         username = username.substring(0, username.length - 10);
         console.log(username);
-        cardContainer.innerHTML += 
+        if(username == "sbechoe"){
+            cardContainer.innerHTML += 
         `
         <div class="col-3">
         <div class="card">
-            <img class="card-img-top" src="${glink}/img/logo.png" alt="logo" />
+            <img class="card-img-top" src="${glink}/img/Hexagon.png" alt="logo" />
             <div class="card-body">
                 <h4 class="card-title"><a href="${glink}">${username}</a></h4>
                 <a href="${glink}">Page</a>
-                <a href="${glink}">profile</a>
+                <a href="https://github.com/${username}">profile</a>
             </div>
         </div>
     </div>
-        `;   
+        `;  
+        }else{
+            cardContainer.innerHTML += 
+            `
+            <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="${glink}/img/logo.png" alt="logo" />
+                <div class="card-body">
+                    <h4 class="card-title"><a href="${glink}">${username}</a></h4>
+                    <a href="${glink}">Page</a>
+                    <a href="https://github.com/${username}">profile</a>
+                </div>
+            </div>
+        </div>
+            `;  
+        }
+         
     }
 }
 
