@@ -1,5 +1,22 @@
+const b1pGithubUsernames = [
+    "thop01",
+    "thop01",
+    "thop01",
+];
 
-const githubRepos = [
+function showB1P(){
+    const cardContainer = document.querySelector(".b1p-list");
+    for(const username of b1pGithubUsernames ){
+        cardContainer.innerHTML+= `
+        <a href="https://${username}.github.io/" target="_blank" rel="noopener noreferrer">  
+            <button type="button" class="btn btn-primary"> ${username}</button>
+        </a>`
+    }
+}
+showB1P();
+
+
+const githubRepos = [ // van 1M
     "https://sbechoe.github.io",
     "https://thop01.github.io",
     "https://reshadshirzai.github.io",
