@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beoordeling</title>
+    <style>
+        * {
+            padding: 10px;
+            /* border:1px solid gray; */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Beoordelingsformulier</h1>
+  
+            <table>
+                <tr>
+                    <td><label for="studentName">Student Naam:</label></td>
+                    <td><input type="text" id="studentName" name="studentName"></td>
+                </tr>
+                <tr>
+                    <td><label for="className">Klas:</label></td>
+                    <td><input type="text" id="className" name="className"></td>
+                </tr>
+                <tr>
+                    <td><label for="teacherName">Docent Naam:</label></td>
+                    <td><input type="text" id="teacherName" name="teacherName"></td>
+                </tr>
+                <tr>
+                    <td><label for="grade">Cijfer:</label></td>
+                    <td><input type="number" step="0.1" id="grade" name="grade"></td>
+                </tr>
+                <tr>
+                    <td><label for="date">Datum:</label></td>
+                    <td><input type="date" id="date" name="date"></td>
+                </tr>
+            </table>
+            <button type="button" id="loadButton">Load Information</button>
+            <!-- saves in localstorage -->
+            <button id="save">save</button>
+            <button id="saveAsHTMLfile">Save as file</button>
+  
+    </header>
+
+    <script src="assessmentForm.js"></script>
+    <script>
+        const assesmentID = "HL";
+        assessmentForm.forEach(process => {
+            const section = document.createElement('section');
+            const title = document.createElement('h2');
+            title.textContent = process.workProcess;
+            section.appendChild(title);
+
+            const table = document.createElement('table');
+            table.border = '1';
+
+            // Create table header
+            const header = table.createTHead();
+            const headerRow = header.insertRow();
+            const headers = ['Criterium', '0 Niet of nauwelijks', '1 Weinig', '2 Grotendeels', '3 Volledig'];
+            headers.forEach(text => {
+                const cell = document.createElement('th');
+                cell.textContent = text;
+                headerRow.appendChild(cell);
+            });
+
+            // Create table body
+            const tbody = table.createTBody();
+            process.criteria.forEach(criterion => {
+                const row = tbody.insertRow();
+                const criterionCell = row.insertCell();
+                criterionCell.textContent = criterion.name;
+
+                criterion.descriptions.forEach((description, index) => {
+                    const cell = row.insertCell();
+                    const label = document.createElement('label');
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = `criterion-${process.workProcess}-${criterion.name}`;
+                    radio.value = index;
+                    label.appendChild(radio);
+                    label.appendChild(document.createTextNode(description));
+                    cell.appendChild(label);
+                });
+            });
+
+            section.appendChild(table);
+            document.body.appendChild(section);
+        });
+
+        // Create and append the save button
+        const saveButton = document.querySelector("button#save");
+        saveButton.addEventListener('click', () => {
+            const studentName = document.getElementById('studentName').value.trim();
+            if (!studentName) {
+                alert('Please fill in the student name.');
+                document.getElementById('studentName').focus();
+                return;
+            }
+
+            if (localStorage.getItem(assesmentID + "-" + studentName)) {
+                if (!confirm('A record for this student already exists. Do you want to overwrite it?')) {
+                    return;
+                }
+            }
+            let allFilled = true;
+            assessmentForm.forEach(process => {
+                process.criteria.forEach(criterion => {
+                    const radios = document.getElementsByName(`criterion-${process.workProcess}-${criterion.name}`);
+                    const isChecked = Array.from(radios).some(radio => radio.checked);
+                    if (!isChecked) {
+                        allFilled = false;
+                    }
+                });
+            });
+
+            if (!allFilled) {
+                if (!confirm('Not all options are filled in. Are you sure you want to save?')) {
+                    return;
+                }
+            }
+
+
+
+            const formData = {
+                studentName: document.getElementById('studentName').value,
+                className: document.getElementById('className').value,
+                teacherName: document.getElementById('teacherName').value,
+                grade: document.getElementById('grade').value,
+                date: document.getElementById('date').value,
+                assessments: []
+            };
+
+            assessmentForm.forEach(process => {
+                const processAssessment = {
+                    workProcess: process.workProcess,
+                    criteria: []
+                };
+
+                process.criteria.forEach(criterion => {
+                    const criterionAssessment = {
+                        name: criterion.name,
+                        selectedValue: null
+                    };
+
+                    const radios = document.getElementsByName(`criterion-${process.workProcess}-${criterion.name}`);
+                    radios.forEach(radio => {
+                        if (radio.checked) {
+                            criterionAssessment.selectedValue = parseInt(radio.value);
+                        }
+                    });
+
+                    processAssessment.criteria.push(criterionAssessment);
+                });
+
+                formData.assessments.push(processAssessment);
+            });
+
+            console.log('Saved Information:', formData);
+            localStorage.setItem(assesmentID + "-" + formData.studentName, JSON.stringify(formData));
+            alert('Information saved successfully!');
+        });
+        // document.body.appendChild(saveButton);
+
+        // Load data by name
+        document.getElementById('loadButton').addEventListener('click', () => {
+            
+            const studentName = document.getElementById('studentName').value;
+            const savedData = localStorage.getItem(assesmentID + "-" + studentName);
+
+            if (savedData) {
+                const formData = JSON.parse(savedData);
+                document.getElementById('className').value = formData.className;
+                document.getElementById('teacherName').value = formData.teacherName;
+                document.getElementById('grade').value = formData.grade;
+                document.getElementById('date').value = formData.date;
+
+                formData.assessments.forEach(processAssessment => {
+                    processAssessment.criteria.forEach(criterionAssessment => {
+                        const radios = document.getElementsByName(`criterion-${processAssessment.workProcess}-${criterionAssessment.name}`);
+                        radios.forEach(radio => {
+                            if (parseInt(radio.value) === criterionAssessment.selectedValue) {
+                                radio.checked = true;
+                            }
+                        });
+                    });
+                });
+
+                alert('Information loaded successfully!');
+            } else {
+                alert('No information found for the given student name.');
+            }
+        });
+
+        // Calculate points on every change
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                let totalPoints = 0;
+                assessmentForm.forEach(process => {
+                    process.criteria.forEach(criterion => {
+                        const radios = document.getElementsByName(`criterion-${process.workProcess}-${criterion.name}`);
+                        radios.forEach(radio => {
+                            if (radio.checked) {
+                                totalPoints += parseInt(radio.value);
+                            }
+                        });
+                    });
+                });
+                const maxPoints = assessmentForm.reduce((total, process) => {
+                    return total + process.criteria.length * 3;
+                }, 0);
+
+                const grade = (totalPoints / maxPoints) * 9 + 1;
+                document.getElementById('grade').value = grade.toFixed(1);
+            });
+        });
+
+
+        document.getElementById('saveAsHTMLfile').addEventListener('click', () => {
+            const studentName = document.getElementById('studentName').value;
+            if (!studentName) {
+                alert('Please fill in the student name.');
+                document.getElementById('studentName').focus();
+                return;
+            }
+            download();
+        });
+
+        function download() {
+
+            // Update the HTML with current form values
+            document.getElementById('studentName').setAttribute('value', document.getElementById('studentName').value);
+            document.getElementById('className').setAttribute('value', document.getElementById('className').value);
+            document.getElementById('teacherName').setAttribute('value', document.getElementById('teacherName').value);
+            document.getElementById('grade').setAttribute('value', document.getElementById('grade').value);
+            document.getElementById('date').setAttribute('value', document.getElementById('date').value);
+
+            assessmentForm.forEach(process => {
+                process.criteria.forEach(criterion => {
+                    const radios = document.getElementsByName(`criterion-${process.workProcess}-${criterion.name}`);
+                    radios.forEach(radio => {
+                        if (radio.checked) {
+                            radio.setAttribute('checked', 'checked');
+                        } else {
+                            radio.removeAttribute('checked');
+                        }
+                    });
+                });
+            });
+
+            //removes all the buttons
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = document.documentElement.innerHTML;;
+            tempDiv.querySelectorAll('button').forEach(button => button.remove());
+            const innerHTML = tempDiv.innerHTML;
+      
+
+
+
+            const studentName = document.getElementById('studentName').value;
+            var element = document.createElement('a');          
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' +
+                encodeURIComponent(innerHTML));
+
+            element.setAttribute('download', assesmentID+"-"+studentName+".html");
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+
+        // Set default value of date input to current date
+        document.getElementById('date').valueAsDate = new Date();
+    </script>
+</body>
+
+</html>
