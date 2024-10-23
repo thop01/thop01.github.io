@@ -1,359 +1,123 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Pascal Thong</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Raleway", sans-serif
-        }
-
-        .text-align-center{
-            text-align: center;
-        }
-
-        .my-bg-color{
-            background: #f2f2f2 !important;
-        }
-
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body class=" w3-content" style="max-width:1600px">
-
-    <!-- Sidebar/menu -->
-    <nav class="my-bg-color w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-        <div class="w3-container text-align-center">
-            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
-                title="close menu">
-                <i class="fa fa-remove"></i>
-            </a>
-            <img src="img/profilegpic.gif" style="width:45%;border-radius: 50%;" class="w3-round"><br><br>
-            <h4><b>Pascal Thong</b></h4>
-            <p class="w3-text-grey">Agile Software Development Teacher</p>
-        </div>
-        <div class="w3-bar-block">
-       
-            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding text-firebrick">
-                <i class="fa fa-th-large fa-fw w3-margin-right"></i>
-                PORTFOLIO
-            </a>
-            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
-                <i class="fa fa-user fa-fw w3-margin-right"></i>
-                ABOUT
-            </a>
-            <a href="#work-of-students" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
-                <i class="fa fa-bug fa-fw w3-margin-right"></i>
-                WORK OF STUDENTS</a>
-            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
-                <i class="fa fa-envelope fa-fw w3-margin-right"></i>
-                CONTACT</a>
-        </div>
-        <div class="w3-panel w3-large">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
-            <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
-            <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-        </div>
-    </nav>
-
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
-        title="close side menu" id="myOverlay"></div>
-
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:300px">
-
-        <!-- Header -->
-        <header id="portfolio">
-            <a href="#"><img src="img/profilegpic.gif" style="width:65px;"
-                    class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
-                    class="fa fa-bars"></i></span>
-            <div class="w3-container">
-                <h1><b>P. Thong</b></h1>
-                <div class="w3-section w3-bottombar w3-padding-16">
-                    <span class="w3-margin-right">Filter:</span>
-                    <button class="w3-button w3-black">ALL</button>
-                    <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Projects</button>
-                    <button class="w3-button w3-white"><i
-                            class="fa fa-photo w3-margin-right"></i>Prototypes</button>
-                    <button class="w3-button w3-white"><i class="fa fa-map-pin w3-margin-right"></i>Lesson
-                        Demo's</button>
-                </div>
-                <script>
-                    const headerElement = document.querySelector("header#portfolio");
-                    const filterButtons = headerElement.querySelectorAll("button");
-                    for(let btn of filterButtons){
-                        btn.addEventListener("click", (event)=>{
-                            for(let bt of filterButtons){
-                                bt.classList.remove("w3-black");
-                                bt.classList.add("w3-white");
-                            }
-                            event.target.classList.add("w3-black");
-                        });
-                    }
-                    
-                </script>
-            </div>
-        </header>
-
-        <!-- First Photo Grid-->
-        <div class="w3-row-padding">
-            <style>
-                html{scroll-behavior:smooth}
-                a{
-                    text-decoration: none;
-                }
-            </style>
-            <div class="w3-third w3-container w3-margin-bottom">
-                <a href="projects/Cesuur/cesuur.html" target="_blank">
-                <img src="img/berekeningcesuur.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>Cesuur</b></p>
-                    <p>
-                        The assessment pass mark serves as an important benchmark for students, indicating the minimum
-                        level of performance that is required in order to successfully complete the assessment. It also
-                        provides a clear and objective standard by which students can gauge their own progress and
-                        performance, and it allows institutions to accurately evaluate the effectiveness of their
-                        assessments.
-                    </p>
-                </div>
-            </a>
-            </div>
-            <div class="w3-third w3-container w3-margin-bottom">
-                <a href="projects/bke/index.html" target="_blank">
-                <img src="img/bke.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>Tic Tac Toe</b></p>
-                    <p>
-                        Tic-tac-toe is a simple and classic two-player game. It is also known as noughts and crosses or Xs and Os.
-                    </p>
-                </div>
-                </a>
-            </div>
-
-            <div class="w3-third w3-container">
-                <a href="projects/Bootstrap/school.html" target="_blank">
-                <img  src="img/huisbaliPNG.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>My bootstrap playground</b></p>
-                    <p>A bootstrap playground is a place where developers and designers can experiment with the Bootstrap framework to create responsive, mobile-first web applications and websites. </p>
-                </div>
-                </a>
-            </div>
-
-         
-
-        </div>
-
-        <!-- Second Photo Grid-->
-        <div class="w3-row-padding">
-
-            <!-- <div class="w3-third w3-container w3-margin-bottom">
-                <img src="img/kleurenschema.PNG" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>Lorem Ipsum</b></p>
-                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
-                        ultricies congue gravida diam non fringilla.</p>
-                </div>
-            </div> -->
-
-            <div class="w3-third w3-container">
-                <a href="v1.html" target="_blank">
-                <img  src="img/v1.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>My old portfolio</b></p>
-                    <p>My old portfolio playground </p>
-                </div>
-                </a>
-            </div>
-
-            <div class="w3-third w3-container">
-                <a href="projects/Sokoban" target="_blank">
-                <img src="img/duck.svg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>Start menu</b></p>
-                    <p>
-                        A start screen
-                    </p>
-                </div>
-            </div>
-            <!-- projects/Sokoban/ -->
-
-            <div class="w3-third w3-container">
-                <a href="projects/cardgame" target="_blank">
-                <img src="projects/cardgame/img/cards/10_of_diamonds.svg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>Start of blackjack</b></p>
-                    <p>
-                        projects/cardgame/
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pagination -->
-        <div class="w3-center w3-padding-32">
-            <div class="w3-bar">
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-                <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-            </div>
-        </div>
-
-
-        <!-- Images of Me -->
-        <div class="w3-row-padding w3-padding-16" id="about">
-            <div class="w3-col m6">
-                <img src="img/me.jpg" alt="Me" style="width:100%">
-            </div>
-            <div class="w3-col m6">
-                <img src="img/hennekam.jpg" alt="Me" style="width:100%">
-            </div>
-        </div>
-
-        <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-            <h4><b>About Me</b></h4>
-
-            <p>
-                Hi there! My name is Pascal Thong, and I am a highly motivated and dedicated individual with a passion
-                for learning and personal growth. I have a strong background in both education and professional
-                experience, and am always looking for new challenges and opportunities to improve myself and those
-                around me.
-            </p>
-            <p>
-                I studied a Bachelor's degree in Computer Science from the Hague University, and have been working in
-                the tech industry for the past several months. I am skilled in a wide range of programming languages and
-                have extensive experience in software development and project management.
-            </p>
-            <p>
-                In my free time, I enjoy hiking, traveling, and reading. I am also an avid volunteer, and have been
-                involved in several community service projects over the years.
-            </p>
-            <p>I am particularly interested in a freelance job opportunity because it would allow me to gain valuable
-                experience and skills. </p>
-            <p>
-                Overall, I am a well-rounded and accomplished individual who is committed to achieving my goals and
-                making a positive impact in the world.
-            </p>
-            <h5><b>Likes</b></h5>
-            <p>
-                <span class="w3-tag w3-black w3-margin-bottom">Travel</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">China</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Indonesia</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Paris</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Norway</span>
-
-                <span class="w3-tag w3-black w3-small w3-margin-bottom">Web Development</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">React</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Angular</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">NodeJS</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">ExpressJS</span>
-
-                <span class="w3-tag w3-black w3-small w3-margin-bottom">Web Design</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Photoshop</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Illustrator</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Adobe XD</span>
-                <span class="w3-tag w3-grey w3-small w3-margin-bottom">Powerpoint XD</span>
-            </p>
-
-            <hr>
-
-            <hr>
-        </div>
-
-        <div id="work-of-students" class="w3-container w3-padding-32 w3-dark-grey">
-            <div class="w3-row-padding">
-                <div class="w3-3333">
-                    <h3>Work of students</h3>
-                    <ul class="w3-ul w3-hoverable">
-                        <li class="w3-padding-16">
-                            <img src="https://picsum.photos/seed/picsum/300/300" class="w3-left w3-margin-right"
-                                style="width:50px">
-                            <span class="w3-large">Coming soon</span><br>
-                            <span>We are excited to announce that something new and exciting is on the horizon. </span>
-                        </li>
-                        <li class="w3-padding-16">
-                            <img src="https://picsum.photos/seed/picsum/300/300" class="w3-left w3-margin-right"
-                                style="width:50px">
-                            <span class="w3-large">Coming Soon</span><br>
-                            <span>We can't wait to share what we have been working on with you, and we know that you
-                                will be just as excited as we are when you see what we have in store. So stay tuned and
-                                get ready for something amazing!</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-   
-
-    <!-- Contact Section -->
-    <div class="w3-container w3-padding-large w3-grey">
-        <h4 id="contact"><b>Contact Me</b></h4>
-        <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-            <div class="w3-third w3-dark-grey">
-                <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-                <p>p.thong@rocmondriaan.nl</p>
-            </div>
-            <div class="w3-third bg-firebrick">
-                <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-                <p style="color:white">The Hague</p>
-            </div>
-            <div class="w3-third w3-dark-grey">
-                <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-                <p>Buy me coffee first</p>
-            </div>
-        </div>
-        <hr class="w3-opacity">
-    </div>
-
-    <!-- Footer -->
-    <div class="w3-container w3-padding-large w3-black w3-center">
-        <h3>Thanks!</h3>
-        <p>Thank you for visiting my portfolio! Please feel free to contact me with any questions or inquiries. I am
-            always looking for new opportunities to learn and grow, and would be happy to discuss potential projects
-            or collaborations.</p>
-
-        Template by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> <br>
-        Text genarated by <a href="https://openai.com/api/" target="_blank">OpenAI: ChatGPT3</a><br>
-        Hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a><br>
-
-        Powered by <a href="https://pthong.nl" title="W3.CSS" target="_blank" class="w3-hover-opacity">P.Thong</a>
-    </div>
-
-    <!-- End page content -->
-</div>
+<body>
     <script>
-        // Script to open and close sidebar
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
+        // Hier wil ik een client-side single page portfolio ontwikkelen. aan de hand van verschillende variabelen
+        const sitename = "Pascal Thong (thop01)";
+        const aboutMe = `
+        Hi there! My name is Pascal Thong, and I am a highly motivated and dedicated individual with a passion for learning and personal growth. I have a strong background in both education and professional experience, and am always looking for new challenges and opportunities to improve myself and those around me.
 
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
+        I studied a Bachelor's degree in Computer Science from the Hague University, and have been working in the tech industry for the past several months. I am skilled in a wide range of programming languages and have extensive experience in software development and project management.
+
+        In my free time, I enjoy hiking, traveling, and reading. I am also an avid volunteer, and have been involved in several community service projects over the years.
+
+        I am particularly interested in a freelance job opportunity because it would allow me to gain valuable experience and skills.
+
+        Overall, I am a well-rounded and accomplished individual who is committed to achieving my goals and making a positive impact in the world.`;
+
+        const myEmail = "p.thong@rocmondriaan.nl";
+
+        const likes = [
+            "Travel", "China", "Indonesia", "London", "Paris", "Norway",
+            "Web Development", "React", "Angular", "NodeJS", "ExpressJS",
+            "Web Design", "Photoshop", "Illustrator", "Adobe XD", "Powerpoint", "XD"
+        ];
+
+        const myProjects = [
+            { stars: 4.5, title: "cesuur", description: "Een tool om een cijfer uitterekenen", url: "projects/Cesuur/cesuur.html" },
+            { stars: 4.5, title: "android", description: "screenshots of what i made once with android", url: "projects/android/index.html" },
+            { stars: 5, title: "uutf", description: "Mijn Next.js Playground", url: "https://www.uutf.nl/" },
+            { stars: 3, title: "320x1480", description: "mini boilerplate voor programmeren voor een scherm van 320 x 1480", url: "projects/cesuur/index.html" },
+            { stars: -1, title: "node", description: "", url: "projects/ai/index.html" },
+            { stars: 3, title: "bke", description: "boter zooi en eieren", url: "projects/bke/index.html" },
+            { stars: 3, title: "bootsrap", description: "Mijn bootstrap playground", url: "projects/bootstrap/school.html" },
+            { stars: 3, title: "classlist demo", description: "mini ding over classlist", url: "projects/classlist-demo/index.html" },
+            { stars: 3, title: "escape-room", description: "Verzameling van escape-rooms van studenten", url: "projects/escaperoom/index.html" },
+            { stars: 1, title: "mini foods json", description: "Klein prutsel van food jsons", url: "projects/food-api/index.html" },
+            { stars: 3, title: "Keuzedeel GP", description: "Kwalificatie doessiers van GP", url: "projects/gameschool/index.html" },
+            // { stars: 3, title: "Kokkorel", description: "Een tool om een cijfer uitterekenen", url: "projects/kokkorel/index.html" },
+            { stars: 2, title: "Leerblokken", description: "Rekenblokken in grid", url: "projects/leerblokken/index.html" },
+            { stars: 4, title: "node cursus", description: "Een begin van een node cursus", url: "projects/nodejs/index.html" },
+            { stars: 1, title: "personen", description: "mini ding voor personen", url: "projects/profiles/index.html" },
+            { stars: 1, title: "qoute genarator", description: "Walchelijke qoute generator", url: "projects/qoutegenerator/working/index.html" },
+            { stars: 3, title: "blokjes website", description: "Mini responsive blokjes website", url: "projects/responsive%20blocks/index.html" },
+            { stars: 1, title: "Sokoban?!", description: "Pijltjes selector ", url: "projects/sokoban/index.html" },
+            { stars: 3, title: "vakjargon", description: "klein begin aan een technische woordenboek", url: "projects/cesuur/index.html" },
+            { stars: 3, title: "responsive", description: "Demo voor gridarea's and mediaquery", url: "projects/responsive/index.html" }  
+
+        ];
+
+        
+
+
+
+        //header
+
+        //aside
+
+        //main
+        const main = document.createElement('main');
+        main.classList.add('p-4');
+
+        const projectsSection = document.createElement('section');
+        projectsSection.classList.add('projects');
+
+        const projectsTitle = document.createElement('h2');
+        projectsTitle.textContent = 'Projects';
+        projectsTitle.classList.add('text-2xl', 'font-bold', 'mb-4');
+        projectsSection.appendChild(projectsTitle);
+
+        const projectsList = document.createElement('div');
+        projectsList.classList.add('grid', 'grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-3', 'gap-4');
+
+
+
+
+
+        
+
+        myProjects.sort((a, b) => b.stars - a.stars).forEach(project => {
+            const projectCard = document.createElement('div');
+            projectCard.classList.add('p-4', 'border', 'rounded', 'shadow');
+
+            const projectTitle = document.createElement('h3');
+            projectTitle.textContent = project.title;
+            projectTitle.classList.add('text-xl', 'font-semibold', 'mb-2');
+            projectCard.appendChild(projectTitle);
+
+            const projectDescription = document.createElement('p');
+            projectDescription.textContent = project.description;
+            projectDescription.classList.add('mb-2');
+            projectCard.appendChild(projectDescription);
+
+            const projectStars = document.createElement('p');
+              projectStars.classList.add('mb-2');
+
+            projectStars.textContent = `Stars: ${project.stars}`;
+            projectStars.classList.add('mb-2');
+            projectCard.appendChild(projectStars);
+
+            const projectLink = document.createElement('a');
+            projectLink.href = project.url;
+            projectLink.textContent = 'View Project';
+            projectLink.classList.add('text-blue-500', 'hover:underline');
+            projectCard.appendChild(projectLink);
+
+            projectsList.appendChild(projectCard);
+        });
+
+        projectsSection.appendChild(projectsList);
+        main.appendChild(projectsSection);
+        document.body.appendChild(main);
+        
+        //footer
     </script>
-
+    
 </body>
-
 </html>

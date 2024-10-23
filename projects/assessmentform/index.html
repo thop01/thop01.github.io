@@ -172,6 +172,23 @@
 
         // Load data by name
         document.getElementById('loadButton').addEventListener('click', () => {
+
+            let allFilled = true;
+            assessmentForm.forEach(process => {
+                process.criteria.forEach(criterion => {
+                    const radios = document.getElementsByName(`criterion-${process.workProcess}-${criterion.name}`);
+                    const isChecked = Array.from(radios).some(radio => radio.checked);
+                    if (isChecked) {
+                        allFilled = false;
+                    }
+                });
+            });
+
+            if (!allFilled) {
+                if (!confirm('some options are filled in. Are you sure you want to load?')) {
+                    return;
+                }
+            }
             
             const studentName = document.getElementById('studentName').value;
             const savedData = localStorage.getItem(assesmentID + "-" + studentName);
